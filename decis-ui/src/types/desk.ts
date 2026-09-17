@@ -128,7 +128,7 @@ export interface ResearchRequest {
   at: string;
   symbol: string;
   note?: string;
-.status: "pending" | "completed";
+  status: "pending" | "completed";
   etaDays: number;
 }
 
