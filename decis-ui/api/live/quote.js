@@ -6,7 +6,7 @@ function num(value) {
   return Number.isFinite(n) ? n : null;
 }
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
@@ -31,7 +31,6 @@ module.exports = async function handler(req, res) {
     const url = `${BITGET_TICKERS}?category=SPOT&symbol=${encodeURIComponent(symbol)}`;
     const upstream = await fetch(url, {
       headers: { Accept: "application/json" },
-      cache: "no-store",
     });
     const body = await upstream.json();
 
@@ -69,4 +68,4 @@ module.exports = async function handler(req, res) {
       retrievedAt: new Date().toISOString(),
     });
   }
-};
+}
