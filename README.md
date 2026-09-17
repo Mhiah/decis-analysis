@@ -4,17 +4,21 @@ Bitget AI Hackathon · **AI Trading Desk** track.
 
 AI processes IAA research artifacts (events, surprises, replay paths, calibration, cost bake-off). The trader keeps the final call. No live orders.
 
-## Run for judges
+## Live desk
+
+**https://decis-analysis.vercel.app** — public Decis UI (Mhiah). Live market quotes via Bitget public API.
+
+Repo: **https://github.com/Mhiah/decis-analysis**
+
+## Run locally
 
 See **DEMO.md** (host + timed script + screenshot checklist) and **CLAIMS.md** (honest claims). Talking points: **DEMO_NOTES.md**.
 
-**Live market stays on for the whole demo** — prefer `desk/start_desk.ps1`, or leave `python desk/live_quotes.py` running in its own terminal.
-
 ```powershell
-powershell -File desk/start_desk.ps1
+powershell -File start_desk.ps1
 # or:
-python desk/live_quotes.py          # keep open
-cd desk/decis-ui; npm run dev
+python live_quotes.py
+cd decis-ui; npm run dev
 ```
 
 ## Data contract (Step 2)
