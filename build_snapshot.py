@@ -1,0 +1,10 @@
+"""Legacy alias — prefer desk/build_desk_snapshot.py for Decis Analysis."""
+
+from pathlib import Path
+import runpy
+
+if __name__ == "__main__":
+    runpy.run_path(
+        str(Path(__file__).resolve().parent / "build_desk_snapshot.py"),
+        run_name="__main__",
+    )

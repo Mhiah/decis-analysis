@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://decis.analysis/schema/desk_snapshot.json",
+  "title": "DecisAnalysisDeskSnapshot",
+  "description": "Frozen v1 data contract for Decis Analysis. Built from IAA artifacts; consumed by decis-ui.",
+  "type": "object",
+  "required": ["product", "track", "tagline", "updatedAt", "posture", "instruments"],
+  "additionalProperties": true,
+  "properties": {
+    "product": { "type": "string", "const": "Decis Analysis" },
+    "track": { "type": "string" },
+    "tagline": { "type": "string" },
+    "updatedAt": { "type": ["string", "null"] },
+    "schemaVersion": { "type": "string" },
+    "posture": {
+      "type": "object",
+      "required": [
+        "strategyEdgeValidated",
+        "calibrationSuccessful",
+        "paperExecutionValidated",
+        "refusalReasons",
+        "paperRefusalReasons"
+      ],
+      "properties": {
+        "strategyEdgeValidated": { "type": "boolean" },
+        "calibrationSuccessful": { "type": "boolean" },
+        "paperExecutionValidated": { "type": "boolean" },
+        "refusalReasons": { "type": "array", "items": { "type": "string" } },
+        "paperRefusalReasons": { "type": "array", "items": { "type": "string" } },
+        "holdoutDirectionAccuracy": { "type": ["number", "null"] },
+        "holdoutMae": { "type": ["number", "null"] }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "events": { "type": "integer" },
+        "issuerClocksValidated": { "type": "integer" },
+        "immutableConsensus": { "type": "integer" },
+        "calibration": { "type": "string" },
+        "paper": { "type": "string" },
+        "live": { "type": "string" }
+      }
+    },
+    "instruments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "eventId",
+          "ticker",
+          "token",
+          "publishedAt",
+          "timestampSemantics",
+          "issuerClockValidated",
+          "direction",
+          "surprise",
+          "importance",
+          "horizonReturn",
+          "firstReturn",
+          "tradeBlockers",
+          "path"
+        ],
+        "properties": {
+          "eventId": { "type": "string" },
+          "ticker": { "type": "string" },
+          "token": { "type": "string" },
+          "publishedAt": { "type": "string" },
+          "timestampSemantics": { "type": "string" },
+          "issuerClockValidated": { "type": "boolean" },
+          "direction": { "type": "string" },
+          "surprise": { "type": ["number", "null"] },
+          "importance": { "type": "string" },
+          "horizonReturn": { "type": ["number", "null"] },
+          "firstReturn": { "type": ["number", "null"] },
+          "tradeBlockers": { "type": "array", "items": { "type": "string" } },
+          "path": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["t", "ret"],
+              "properties": {
+                "t": { "type": "number" },
+                "ret": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

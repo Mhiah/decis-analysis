@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAA Desk — AI Trading Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="nav">
+      <a class="brand" href="#" aria-label="IAA Desk home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-email">/ IAA Desk</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#insights">Insights</a>
+        <span class="dot" aria-hidden="true"></span>
+        <a href="#events">Events</a>
+        <span class="dot" aria-hidden="true"></span>
+        <a href="#stress">Stress test</a>
+        <span class="dot" aria-hidden="true"></span>
+        <a href="#decision">Your call</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="track-pill">AI Trading Desk</span>
+        <button type="button" class="btn btn-outline" id="btn-export">Export brief</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="proof-row">
+          <span class="proof-avatar" aria-hidden="true"></span>
+          <span class="proof-count" id="gate-events">30 events</span>
+          <span class="status-chip" id="chip-edge">edge: …</span>
+        </div>
+        <h1 class="hero-brand">IAA Desk</h1>
+        <p class="hero-lede">
+          AI processes earnings research on Bitget rTokens. You keep the final call —
+          no silent live orders.
+        </p>
+        <div class="gate-row" id="gate-row"></div>
+        <form class="ask-bar" id="ask-form">
+          <label class="sr-only" for="ask-input">Ask the desk</label>
+          <input id="ask-input" type="text" placeholder='Ask: “Why is paper blocked?” or “Show AMD path”' autocomplete="off" />
+          <button type="submit" class="btn btn-fill">Ask</button>
+        </form>
+      </div>
+      <aside class="hero-glass" aria-live="polite">
+        <p class="stat-kicker">— RESEARCH VERDICT</p>
+        <p class="stat-value" id="verdict-title">Loading</p>
+        <p class="stat-label" id="verdict-body">Pulling latest bake-off snapshot…</p>
+        <ul class="refusal-list" id="refusal-list"></ul>
+      </aside>
+    </section>
+
+    <section class="panel" id="insights">
+      <p class="eyebrow">Information insights</p>
+      <h2>What the model sees right now</h2>
+      <div class="insight-grid" id="insight-grid"></div>
+    </section>
+
+    <section class="panel" id="events">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Event workstation</p>
+          <h2>Thirty joined earnings windows</h2>
+        </div>
+        <div class="filters">
+          <input id="filter-ticker" type="search" placeholder="Filter ticker" />
+          <select id="filter-direction">
+            <option value="">All directions</option>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="neutral">Neutral</option>
+          </select>
+        </div>
+      </div>
+      <div class="split">
+        <div class="table-wrap">
+          <table class="event-table">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Surprise</th>
+                <th>Dir</th>
+                <th>180m</th>
+                <th>Clock</th>
+              </tr>
+            </thead>
+            <tbody id="event-tbody"></tbody>
+          </table>
+        </div>
+        <article class="detail-card" id="event-detail">
+          <p class="eyebrow">Selected event</p>
+          <h3 id="detail-title">Select an event</h3>
+          <p id="detail-meta" class="muted"></p>
+          <canvas id="path-chart" width="640" height="220" aria-label="Return path chart"></canvas>
+          <div class="blocker-wrap">
+            <p class="eyebrow">Trade blockers</p>
+            <div id="detail-blockers" class="chip-row"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="stress">
+      <p class="eyebrow">Decision stress-testing</p>
+      <h2>Holdout bake-off after costs</h2>
+      <div class="rank-grid" id="rank-grid"></div>
+    </section>
+
+    <section class="panel decision-panel" id="decision">
+      <p class="eyebrow">Your call</p>
+      <h2>Human override — research only</h2>
+      <p class="muted">AI recommends based on gates. Submitting here logs a desk decision; it does not send live orders.</p>
+      <div class="decision-row">
+        <div>
+          <p class="decision-rec" id="ai-rec">AI recommendation: NO TRADE</p>
+          <p class="muted" id="ai-rec-why"></p>
+        </div>
+        <div class="cta-row">
+          <button type="button" class="btn btn-fill" data-decision="HOLD">Hold / no trade</button>
+          <button type="button" class="btn btn-outline" data-decision="REVIEW">Mark for review</button>
+          <button type="button" class="btn btn-danger" data-decision="FORCE_IDEA" title="Logged only; not executable">Log idea only</button>
+        </div>
+      </div>
+      <p class="toast" id="toast" hidden></p>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
