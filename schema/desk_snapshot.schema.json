@@ -39,7 +39,8 @@
         "immutableConsensus": { "type": "integer" },
         "calibration": { "type": "string" },
         "paper": { "type": "string" },
-        "live": { "type": "string" }
+        "live": { "type": "string" },
+        "researchSource": { "type": "string" }
       }
     },
     "instruments": {
@@ -75,6 +76,10 @@
           "horizonReturn": { "type": ["number", "null"] },
           "firstReturn": { "type": ["number", "null"] },
           "tradeBlockers": { "type": "array", "items": { "type": "string" } },
+          "researchStatus": {
+            "type": "string",
+            "enum": ["ready", "pending_surprise", "pending_path"]
+          },
           "path": {
             "type": "array",
             "items": {

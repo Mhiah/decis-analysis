@@ -33,11 +33,13 @@ Open the Local URL Vite prints (often `http://127.0.0.1:5173/` or `:5174/`).
 
 Confirm Live market pill says **Live** before you present. If it says Offline, Terminal A died — restart `python desk/live_quotes.py`.
 
-Optional snapshot rebuild (IAA artifacts must be present):
+Optional snapshot rebuild:
 
 ```powershell
-python desk/build_desk_snapshot.py
+python build_desk_snapshot.py
 ```
+
+Hosted research packages refresh via GitHub Action about **every 3 hours** (Actions → Research refresh → Run workflow). Set repo secret `IAA_SEC_USER_AGENT` first.
 
 **Phone check:** same URL on LAN if needed; mobile layout is covered in `MOBILE.md`.
 
@@ -49,7 +51,7 @@ python desk/build_desk_snapshot.py
 
 > “Decis Analysis — AI Trading Desk for Bitget rTokens. AI processes the research, argues against itself, and hands you the call. No live orders. No proven-edge claim.”
 
-Point at footer: **BITGET AI HACKATHON S2**.
+Point at footer: **BITGET AI HACKATHON S2** (and research updated time when present).
 
 ### 1. Workstation (45s)
 

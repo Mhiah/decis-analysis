@@ -131,16 +131,16 @@ export function buildSignal(focus: FocusInstrument): SignalRead {
 
   return {
     material: aligned
-      ? `Surprise direction and 180m absorption line up for ${focus.ticker} — the print is usable as a coherent research read.`
-      : `Surprise direction and 180m absorption conflict for ${focus.ticker} — the print alone is not a clean story.`,
+      ? `Surprise direction and 180m absorption line up for ${focus.ticker}. The print is usable as a coherent research read.`
+      : `Surprise direction and 180m absorption conflict for ${focus.ticker}. The print alone is not a clean story.`,
     changed: faded
-      ? `After the first print (${first}), the path faded toward ${horizon} by the 180m mark — initial reaction did not hold.`
+      ? `After the first print (${first}), the path faded toward ${horizon} by the 180m mark. Initial reaction did not hold.`
       : `From first print (${first}) to 180m (${horizon}), the path ${
           aligned ? "held with the surprise direction" : "kept fighting the surprise direction"
         }.`,
     implies: aligned
-      ? "Posture: Review if you have a thesis — still your call, not an Idea by default."
-      : "Posture: Hold / keep researching — do not chase the print against the path.",
+      ? "Posture: Review if you have a thesis. Still your call, not an Idea by default."
+      : "Posture: Hold / keep researching. Do not chase the print against the path.",
     confidenceNotes: [],
   };
 }
@@ -157,20 +157,20 @@ export function buildStress(focus: FocusInstrument): StressTest {
 
   return {
     thesisSummary: aligned
-      ? `${focus.ticker}: surprise and 180m path agree — advisory Review posture, not an order.`
-      : `${focus.ticker}: surprise and 180m path diverge — advisory Hold / keep researching.`,
+      ? `${focus.ticker}: surprise and 180m path agree. Advisory Review posture, not an order.`
+      : `${focus.ticker}: surprise and 180m path diverge. Advisory Hold / keep researching.`,
     bullCase: aligned
       ? `Surprise direction and 180m path agree for ${focus.ticker}; a discretionary Review could watch for continuation.`
-      : `If the ${focus.direction} surprise was slow to show up in the rToken, a later move toward that direction is still possible — watch, don’t assume.`,
+      : `If the ${focus.direction} surprise was slow to show up in the rToken, a later move toward that direction is still possible. Watch, don’t assume.`,
     bearCase: aligned
       ? `Agreement can reverse quickly; a sharp snapback through the first print would weaken the local read.`
-      : `Price already moved ${pct(focus.horizonReturn)} while surprise was ${focus.direction} — chasing now fights the observed path.`,
+      : `Price already moved ${pct(focus.horizonReturn)} while surprise was ${focus.direction}. Chasing now fights the observed path.`,
     invalidation: [
       `If the 60–180m path extends further against the ${focus.direction} surprise, drop the idea.`,
       "If the event clock or surprise figure looks wrong after a re-check, restart the read.",
       "If you cannot state a clear invalidation price or time, stay on Hold.",
     ],
-    advisoryNote: "Advisory desk only — log Hold / Review / Idea; no exchange ticket is sent.",
+    advisoryNote: "Advisory desk only. Log Hold / Review / Idea; no exchange ticket is sent.",
   };
 }
 
@@ -255,7 +255,7 @@ export function buildAiSummary(focus: FocusInstrument): string {
 
   if (aligned) {
     parts.push(
-      `For ${focus.ticker}, the print and the rToken are telling the same story so far — that coherence can justify a Review watchlist, not an automatic Idea.`,
+      `For ${focus.ticker}, the print and the rToken are telling the same story so far. That coherence can justify a Review watchlist, not an automatic Idea.`,
     );
   } else {
     parts.push(
@@ -269,7 +269,7 @@ export function buildAiSummary(focus: FocusInstrument): string {
     );
   } else if (extended && aligned) {
     parts.push(
-      "The move extended after the first print, which strengthens the local read — still only advisory.",
+      "The move extended after the first print, which strengthens the local read. Still only advisory.",
     );
   }
 
@@ -284,7 +284,7 @@ export function buildAiSummary(focus: FocusInstrument): string {
   }
 
   parts.push(
-    "Decis stops at the note — Hold, Review, or Idea stays your call, and nothing is sent to Bitget.",
+    "Decis stops at the note. Hold, Review, or Idea stays your call, and nothing is sent to Bitget.",
   );
 
   return parts.join(" ");

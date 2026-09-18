@@ -32,6 +32,8 @@ export interface StressTest {
   advisoryNote: string;
 }
 
+export type ResearchStatus = "ready" | "pending_surprise" | "pending_path";
+
 export interface FocusInstrument {
   eventId: string;
   ticker: string;
@@ -46,6 +48,8 @@ export interface FocusInstrument {
   firstReturn: number | null;
   tradeBlockers: string[];
   path: Array<{ t: number; ret: number }>;
+  /** Optional: incomplete packages from scheduled SEC refresh. */
+  researchStatus?: ResearchStatus;
 }
 
 export interface DeskPosture {
@@ -73,6 +77,7 @@ export interface DeskSnapshot {
     calibration: string;
     paper: string;
     live: string;
+    researchSource?: string;
   };
 }
 

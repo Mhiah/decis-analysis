@@ -77,7 +77,7 @@ export function DeskLoopReview({
   return (
     <section className="panel-card chapter" id="posttrade">
       <p className="eyebrow">Review &amp; self-development</p>
-      <p className="section-hint">What happened — and what you’ll keep</p>
+      <p className="section-hint">What happened, and what you’ll keep</p>
 
       <div className="stress-grid decision-meaning-grid">
         <article className="stress-card bull">
@@ -90,7 +90,7 @@ export function DeskLoopReview({
         </article>
         <article className="stress-card invalidate">
           <p className="stress-label">Playbook</p>
-          <p>Promote a review lesson so the next Idea starts wiser — still not a claimed edge.</p>
+          <p>Promote a review lesson so the next Idea starts wiser.</p>
         </article>
       </div>
 

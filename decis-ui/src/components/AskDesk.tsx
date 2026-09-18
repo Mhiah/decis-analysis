@@ -20,7 +20,7 @@ export function AskDesk({ view }: AskDeskProps) {
   return (
     <section className="panel-card ask-desk chapter" id="ask">
       <p className="eyebrow">Ask</p>
-      <p className="section-hint">Query the structured desk — with cites</p>
+      <p className="section-hint">Query the structured desk, with cites</p>
 
       <div className="ask-prompts">
         {ASK_PROMPTS.map((prompt) => (

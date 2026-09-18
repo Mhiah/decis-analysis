@@ -96,12 +96,11 @@ export function LiveQuotesPanel({
       {status === "error" && !shown?.ok ? (
         <p className="live-error">
           {shown?.error ?? "Could not reach Bitget."}
-          <span> Keep `python desk/live_quotes.py` running — retrying…</span>
+          <span> Keep `python desk/live_quotes.py` running. Retrying…</span>
         </p>
       ) : (
         <>
           <div className="live-glance">
-            <p className="metric-label">Last</p>
             <p className="live-last tabular">{fmt(shown?.lastPrice, 4)}</p>
             <p className={`live-change tabular ${changeTone}`}>{pct(change)} 24h</p>
           </div>

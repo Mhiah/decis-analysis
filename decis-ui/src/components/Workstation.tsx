@@ -26,6 +26,19 @@ function clockLabel(focus: FocusInstrument): string {
   return focus.timestampSemantics.replace(/_/g, " ").toUpperCase();
 }
 
+function ClockValue({ focus }: { focus: FocusInstrument }) {
+  const words = clockLabel(focus).split(/\s+/).filter(Boolean);
+  return (
+    <>
+      {words.map((word) => (
+        <span key={word} className="clock-line">
+          {word}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export function Workstation({
   instruments,
   selectedEventId,
@@ -150,8 +163,11 @@ export function Workstation({
                   {focus.direction} · print vs expectations
                 </p>
               </div>
-              <div>
-                <dt>180m path</dt>
+              <div className="evidence-path">
+                <dt>
+                  <span className="label-line">180m</span>
+                  <span className="label-line">path</span>
+                </dt>
                 <dd className={`tabular ${pathTone}`}>
                   {pct(focus.horizonReturn)}
                 </dd>
@@ -160,8 +176,13 @@ export function Workstation({
                 </p>
               </div>
               <div className="evidence-clock">
-                <dt>Event clock</dt>
-                <dd>{clockLabel(focus)}</dd>
+                <dt>
+                  <span className="label-line">Event</span>
+                  <span className="label-line">clock</span>
+                </dt>
+                <dd>
+                  <ClockValue focus={focus} />
+                </dd>
                 <p className="evidence-hint">
                   {focus.issuerClockValidated
                     ? "Issuer release time validated"
@@ -171,17 +192,21 @@ export function Workstation({
             </dl>
 
             <p className="live-footnote">
-              Frozen research snapshot · news vs absorption vs clock quality
+              Research snapshot
+              {focus.researchStatus && focus.researchStatus !== "ready"
+                ? ` · ${focus.researchStatus.replace(/_/g, " ")}`
+                : ""}{" "}
+              · news vs absorption vs clock quality
             </p>
           </aside>
+
+          {children}
 
           <AiSummaryCard
             summary={aiSummary}
             focusLabel={`${focus.ticker} / ${focus.token}`}
           />
         </div>
-
-        {children}
       </div>
     </section>
   );

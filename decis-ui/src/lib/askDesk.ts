@@ -73,7 +73,7 @@ export function askDesk(view: GeneratedDeskView, rawQuestion: string): AskReply 
   if (/imply|implies|posture|hold|review|idea|call|decide/.test(q)) {
     return {
       question: rawQuestion,
-      answer: `${signal.implies} ${stress.advisoryNote} For ${ticker}: Hold = leave it; Review = watchlist; Idea = log for later — none are orders.`,
+      answer: `${signal.implies} ${stress.advisoryNote} For ${ticker}: Hold = leave it; Review = watchlist; Idea = log for later. None are orders.`,
       cites: ["signal.implies", "stress.advisoryNote"],
     };
   }
@@ -84,7 +84,7 @@ export function askDesk(view: GeneratedDeskView, rawQuestion: string): AskReply 
       answer: `${ticker} clock is ${focus.timestampSemantics.replace(/_/g, " ")}${
         focus.issuerClockValidated
           ? " (issuer validated)."
-          : " (EDGAR acceptance fallback — not issuer wire time)."
+          : " (EDGAR acceptance fallback, not issuer wire time)."
       }`,
       cites: ["focus.timestampSemantics", "focus.issuerClockValidated"],
     };

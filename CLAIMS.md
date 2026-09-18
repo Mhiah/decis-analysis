@@ -32,3 +32,5 @@ One-liner: AI processes the research, argues against itself, and hands you the c
 - Focus selector = earnings/event packages in `desk_snapshot`, not every Bitget rToken.
 - Execution / review / develop are option A: UI + `localStorage` only.
 - Live quotes are market context only; they do not drive signal or stress-test.
+- Research packages refresh on a **3-hour GitHub Action** (SEC + Bitget). Surprise needs human/vendor consensus input; path needs candles after the event clock.
+- Refresh does not flip `strategyEdgeValidated` or claim new edge.

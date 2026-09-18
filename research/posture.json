@@ -1,0 +1,19 @@
+{
+  "strategyEdgeValidated": false,
+  "calibrationSuccessful": true,
+  "paperExecutionValidated": false,
+  "refusalReasons": [
+    "CHALLENGER_MEAN_NET_NOT_POSITIVE",
+    "FAILED_TO_BEAT_ALL_BASELINES",
+    "PROFIT_FACTOR_NOT_ABOVE_ONE",
+    "INSUFFICIENT_HOLDOUT_TRADES",
+    "CHALLENGER_TOOK_ZERO_TRADES"
+  ],
+  "paperRefusalReasons": [
+    "HISTORICAL_BID_ASK_UNAVAILABLE"
+  ],
+  "holdoutDirectionAccuracy": 0.5,
+  "holdoutMae": 0.04158885543839811,
+  "source": "benchmark-20260916T003040454840Z / calibration-20260916T003040120412Z",
+  "note": "Frozen research posture. Refresh does not re-validate strategy edge."
+}

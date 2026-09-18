@@ -16,7 +16,7 @@ const ACTIONS: Array<{
   {
     kind: "HOLD",
     label: "Hold",
-    meaning: "Stay flat. Evidence isn’t enough — leave it.",
+    meaning: "Stay flat. Evidence isn’t enough. Leave it.",
     tone: "hold",
   },
   {
@@ -28,7 +28,7 @@ const ACTIONS: Array<{
   {
     kind: "IDEA",
     label: "Idea",
-    meaning: "Log for later human work — still not an order.",
+    meaning: "Log for later human work. Still not an order.",
     tone: "idea",
   },
 ];
@@ -65,7 +65,7 @@ export function DecisionBar({
       </div>
 
       <p className="advisory-note">
-        Research audit only — never sent to Bitget.
+        Research audit only. Never sent to Bitget.
       </p>
 
       <details className="faq-item desk-fold">

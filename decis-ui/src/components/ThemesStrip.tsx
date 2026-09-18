@@ -25,7 +25,7 @@ const THEMES = [
     id: "execution",
     step: "04",
     title: "Execution support",
-    blurb: "Draft a local size ticket — never sent.",
+    blurb: "Draft a local size ticket. Never sent.",
   },
   {
     id: "posttrade",

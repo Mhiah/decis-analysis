@@ -76,10 +76,12 @@ export function ResearchRequestPanel({
       <div className="fold-body">
         <div className="faq-list research-request-facts">
           <details className="faq-item">
-            <summary>Ready now — {readyCount} requests</summary>
+            <summary>
+              Ready now: {readyCount} rToken research available
+            </summary>
             <p>
-              <strong>{readyCount}</strong> Bitget rToken research requests are
-              already on this desk — pick them from Focus rToken above.
+              <strong>{readyCount}</strong> Bitget rToken research packages are
+              already on this desk. Pick them from Focus rToken above.
             </p>
           </details>
           <details className="faq-item">
@@ -121,7 +123,7 @@ export function ResearchRequestPanel({
           </div>
           {alreadyReady ? (
             <p className="research-request-status">
-              That name is already in the ready set of {readyCount} — use Focus
+              That name is already in the ready set of {readyCount}. Use Focus
               rToken above.
             </p>
           ) : (

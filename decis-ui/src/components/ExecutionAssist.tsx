@@ -60,7 +60,7 @@ export function ExecutionAssist({
   return (
     <section className="panel-card chapter" id="execution">
       <p className="eyebrow">Execution support</p>
-      <p className="section-hint">Draft a local size ticket — never sent</p>
+      <p className="section-hint">Draft a local size ticket. Never sent.</p>
 
       <div className="stress-grid decision-meaning-grid">
         <article className="stress-card decision-card hold">
@@ -70,7 +70,7 @@ export function ExecutionAssist({
         <article className="stress-card decision-card review">
           <p className="stress-label">From Review or Idea</p>
           <p>
-            Hold means leave it — no draft. Review or Idea means you’re still
+            Hold means leave it: no draft. Review or Idea means you’re still
             working the name, so you can jot size.
           </p>
         </article>
