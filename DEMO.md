@@ -51,7 +51,7 @@ Hosted research packages refresh via GitHub Action about **every 3 hours** (Acti
 
 > “Decis Analysis — AI Trading Desk for Bitget rTokens. AI processes the research, argues against itself, and hands you the call. No live orders. No proven-edge claim.”
 
-Point at footer: **BITGET AI HACKATHON S2** (and research updated time when present).
+Point at footer: **BITGET AI HACKATHON S2**.
 
 ### 1. Workstation (45s)
 

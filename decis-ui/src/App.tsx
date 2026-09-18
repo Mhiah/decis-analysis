@@ -230,18 +230,7 @@ export default function App() {
       </main>
 
       <footer className="site-endmark" aria-label="Hackathon mark">
-        <span>BITGET AI HACKATHON S2</span>
-        {snapshot.updatedAt ? (
-          <span className="site-endmark-meta">
-            Research updated{" "}
-            {new Date(snapshot.updatedAt).toLocaleString(undefined, {
-              month: "short",
-              day: "numeric",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-          </span>
-        ) : null}
+        BITGET AI HACKATHON S2
       </footer>
 
       {toast ? <div className="toast">{toast}</div> : null}
