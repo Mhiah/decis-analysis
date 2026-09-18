@@ -229,6 +229,17 @@ export default function App() {
         </div>
       </main>
 
+      <button
+        type="button"
+        className="back-home"
+        onClick={() => {
+          setActiveSection("workstation");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        ← Back home
+      </button>
+
       <footer className="site-endmark" aria-label="Hackathon mark">
         BITGET AI HACKATHON S2
       </footer>

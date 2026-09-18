@@ -1622,8 +1622,26 @@ button, select, input { font: inherit; }
 
 .boot-state.error { color: var(--coral); }
 
+.back-home {
+  display: block;
+  margin: 28px 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.back-home:hover {
+  color: var(--violet);
+}
+
 .site-endmark {
-  margin-top: 36px;
+  margin-top: 18px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
   text-align: right;
@@ -2138,8 +2156,13 @@ button, select, input { font: inherit; }
     min-height: 52px;
   }
 
+  .back-home {
+    margin-top: 20px;
+    font-size: 0.98rem;
+  }
+
   .site-endmark {
-    margin-top: 24px;
+    margin-top: 14px;
     padding-top: 14px;
     font-size: 0.62rem;
     letter-spacing: 0.12em;
