@@ -4,7 +4,7 @@
 **Product:** Decis Analysis  
 **One-liner:** AI processes the research, argues against itself, and hands you the call.
 
-Longer talking points / glossary: **DEMO_NOTES.md** · Honest claims: **CLAIMS.md**
+Honest claims: **CLAIMS.md**
 
 ---
 
@@ -149,5 +149,3 @@ Suggested save folder: `desk/demo-shots/` (create when capturing).
 | EDGAR acceptance | SEC accept time used as t=0 when issuer clock isn’t validated |
 | Hold / Review / Idea | Your research call — never an exchange order |
 | Live market | Bitget ticker context only |
-
-Full glossary: **DEMO_NOTES.md**.
