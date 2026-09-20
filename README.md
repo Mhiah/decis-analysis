@@ -14,6 +14,8 @@ Docs: **[DEMO.md](./DEMO.md)** · **[CLAIMS.md](./CLAIMS.md)** · **[SPEC.md](./
 
 Most trading UIs either dump raw data or jump straight to an order. Earnings research and the rToken tape usually live in different places. Decis keeps them on one desk and stops before the submit button.
 
+Bitget lists the rToken; EDGAR times the print; Decis puts surprise, path, and clock on one desk so a discretionary trader can decide without the system trading for them.
+
 1. **Evidence before narrative.** Surprise (news), 180m path (absorption), and event clock (how soft t=0 is) share one panel.
 2. **AI that argues against itself.** Signal (`material` / `changed` / `implies`) is followed by bull, bear, and invalidation.
 3. **Human keeps the call.** Hold / Review / Idea are research audit actions. They never become Bitget tickets.
@@ -68,6 +70,37 @@ Most trading UIs either dump raw data or jump straight to an order. Earnings res
 | **Live market** | Bitget public ticker | **No** |
 | **Hold / Review / Idea** | Human + `localStorage` | Research audit only |
 | **Draft ticket / playbook** | Browser only | Never submitted |
+
+---
+
+## How it uses Bitget
+
+Bitget created the **stock rToken** market Decis researches (e.g. `RJPMUSDT` for JPM). The desk is built for that surface — not for equities-only portals, and not for a full Bitget universe browser.
+
+| Bitget surface | How Decis uses it |
+|----------------|-------------------|
+| **Public ticker** | Live market panel (last, bid/ask, 24h) on the focused rToken — context only |
+| **Public 1m candles** | Historical windows around each event clock for the **180m path** replay |
+| **Hosted quote route** | Vercel `/api/live/quote` (and local `live_quotes.py`) so the tape stays up without keys |
+
+**What Bitget does *not* supply (and Decis does not invent):**
+
+- SEC filings / Item 2.02 exhibits → pulled from **EDGAR**
+- Pre-event consensus for Surprise → research rows (`consensus_live.jsonl`); without them Surprise stays `—`
+- Historical bid/ask for paper fills → unavailable; paper execution stays **blocked**
+- Order placement → **not used**. No Bitget order API, no Agent Hub trade tools, no API keys on the desk
+
+**Bitget created the rToken tape; Decis joins that tape to earnings evidence and stops at the human call.** Live quotes never rewrite signal, stress-test, Ask, or Hold / Review / Idea.
+
+**Claim boundaries (Bitget-facing)**
+
+| Claim | Status |
+|-------|--------|
+| Public Bitget ticker beside research focus | Proven (when Live) |
+| 180m path from Bitget 1m candles in research packages | Proven on seeded set |
+| Scheduled refresh that can pull new SEC events + Bitget candles | Proven (Action) |
+| Bitget order / paper fill / Agent Hub execution | **Not claimed** |
+| Full Bitget Reality listing as Focus list | **Not claimed** (packages only) |
 
 ---
 
@@ -170,8 +203,6 @@ What it does:
 | Data contract | `schema/desk_snapshot.schema.json` → `desk_snapshot.json` |
 | CI | GitHub Actions research refresh |
 | Persistence | Decision journal / tickets / lessons in browser `localStorage` |
-
-**Bitget tools used:** public market data only (candles + ticker). No Bitget order API. No Agent SDK trading tools.
 
 ---
 
