@@ -110,16 +110,18 @@ export function askDesk(view: GeneratedDeskView, rawQuestion: string): AskReply 
   };
 }
 
+export type QwenResult = { reply: AskReply } | { error: string };
+
 /**
  * Ask Qwen (via /api/ask) over the same structured desk objects.
- * Returns null when Qwen is not configured or fails, so the caller keeps the
- * deterministic answer.
+ * On failure returns a short reason so the caller can keep the deterministic
+ * answer and say why Qwen was not used.
  */
 export async function askQwen(
   view: GeneratedDeskView,
   question: string,
   signal?: AbortSignal,
-): Promise<AskReply | null> {
+): Promise<QwenResult> {
   try {
     const { focus, signal: read, stress, evidence, aiSummary } = view;
     const res = await fetch("/api/ask", {
@@ -131,23 +133,27 @@ export async function askQwen(
       }),
       signal,
     });
-    if (!res.ok) return null;
-    const data = (await res.json()) as {
+    const data = (await res.json().catch(() => null)) as {
       ok?: boolean;
       answer?: string;
       cites?: string[];
       model?: string;
-    };
-    if (!data.ok || !data.answer) return null;
+      error?: string;
+    } | null;
+    if (!res.ok || !data?.ok || !data.answer) {
+      return { error: data?.error ?? `HTTP ${res.status}` };
+    }
     return {
-      question,
-      answer: data.answer,
-      cites: data.cites ?? [],
-      source: "qwen",
-      model: data.model,
+      reply: {
+        question,
+        answer: data.answer,
+        cites: data.cites ?? [],
+        source: "qwen",
+        model: data.model,
+      },
     };
-  } catch {
-    return null;
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : "request failed" };
   }
 }
 

@@ -10,6 +10,7 @@ export function AskDesk({ view }: AskDeskProps) {
   const [question, setQuestion] = useState(ASK_PROMPTS[0]);
   const [reply, setReply] = useState<AskReply | null>(null);
   const [thinking, setThinking] = useState(false);
+  const [qwenError, setQwenError] = useState<string | null>(null);
   const pending = useRef<AbortController | null>(null);
 
   useEffect(() => () => pending.current?.abort(), []);
@@ -25,9 +26,11 @@ export function AskDesk({ view }: AskDeskProps) {
     const controller = new AbortController();
     pending.current = controller;
     setThinking(true);
+    setQwenError(null);
     void askQwen(view, q, controller.signal).then((qwen) => {
       if (controller.signal.aborted) return;
-      if (qwen) setReply(qwen);
+      if ("reply" in qwen) setReply(qwen.reply);
+      else setQwenError(qwen.error);
       setThinking(false);
     });
   }
@@ -80,7 +83,9 @@ export function AskDesk({ view }: AskDeskProps) {
               ? `Answered by Qwen (${reply.model ?? "Model Studio"}) from desk objects only`
               : thinking
                 ? "Desk template · asking Qwen…"
-                : "Desk template"}
+                : qwenError
+                  ? `Desk template · Qwen not used: ${qwenError}`
+                  : "Desk template"}
           </p>
         </article>
       ) : null}
