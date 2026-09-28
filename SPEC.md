@@ -169,7 +169,7 @@ Focus selector = research packages in the snapshot only.
 ## 11. NL layer
 
 **v1 (shipped):** Deterministic generators + constrained Ask desk templates.  
-**v1.1 (optional):** LLM rewrite only over structured objects already produced.
+**v1.1 (shipped, opt-in):** Qwen (Model Studio) rewrites Ask answers only over structured objects already produced; cites are filtered to an allow-list; deterministic answer stays as fallback.
 
 ---
 

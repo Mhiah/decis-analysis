@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { GeneratedDeskView } from "../types/desk";
-import { ASK_PROMPTS, askDesk, type AskReply } from "../lib/askDesk";
+import { ASK_PROMPTS, askDesk, askQwen, type AskReply } from "../lib/askDesk";
 
 interface AskDeskProps {
   view: GeneratedDeskView;
@@ -9,12 +9,27 @@ interface AskDeskProps {
 export function AskDesk({ view }: AskDeskProps) {
   const [question, setQuestion] = useState(ASK_PROMPTS[0]);
   const [reply, setReply] = useState<AskReply | null>(null);
+  const [thinking, setThinking] = useState(false);
+  const pending = useRef<AbortController | null>(null);
+
+  useEffect(() => () => pending.current?.abort(), []);
 
   function submit(next?: string) {
     const q = (next ?? question).trim();
     if (!q) return;
     setQuestion(q);
-    setReply(askDesk(view, q));
+    // Deterministic answer first; Qwen replaces it only if it answers.
+    setReply({ ...askDesk(view, q), source: "desk" });
+
+    pending.current?.abort();
+    const controller = new AbortController();
+    pending.current = controller;
+    setThinking(true);
+    void askQwen(view, q, controller.signal).then((qwen) => {
+      if (controller.signal.aborted) return;
+      if (qwen) setReply(qwen);
+      setThinking(false);
+    });
   }
 
   return (
@@ -60,6 +75,13 @@ export function AskDesk({ view }: AskDeskProps) {
           {reply.cites.length ? (
             <p className="ask-cites">Cites: {reply.cites.join(" · ")}</p>
           ) : null}
+          <p className="ask-cites">
+            {reply.source === "qwen"
+              ? `Answered by Qwen (${reply.model ?? "Model Studio"}) from desk objects only`
+              : thinking
+                ? "Desk template · asking Qwen…"
+                : "Desk template"}
+          </p>
         </article>
       ) : null}
     </section>

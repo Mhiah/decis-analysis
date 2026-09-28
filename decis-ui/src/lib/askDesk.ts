@@ -4,6 +4,9 @@ export interface AskReply {
   question: string;
   answer: string;
   cites: string[];
+  /** "desk" = deterministic template; "qwen" = Qwen grounded on the same objects. */
+  source?: "desk" | "qwen";
+  model?: string;
 }
 
 const PROMPTS = [
@@ -105,6 +108,47 @@ export function askDesk(view: GeneratedDeskView, rawQuestion: string): AskReply 
       "I only answer from this focus’s desk objects. Try: AI summary, bear case, invalidation, bull case, Hold vs Review, or event clock.",
     cites: ["desk.refuse_unsupported"],
   };
+}
+
+/**
+ * Ask Qwen (via /api/ask) over the same structured desk objects.
+ * Returns null when Qwen is not configured or fails, so the caller keeps the
+ * deterministic answer.
+ */
+export async function askQwen(
+  view: GeneratedDeskView,
+  question: string,
+  signal?: AbortSignal,
+): Promise<AskReply | null> {
+  try {
+    const { focus, signal: read, stress, evidence, aiSummary } = view;
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        question,
+        desk: { focus, signal: read, stress, evidence, aiSummary },
+      }),
+      signal,
+    });
+    if (!res.ok) return null;
+    const data = (await res.json()) as {
+      ok?: boolean;
+      answer?: string;
+      cites?: string[];
+      model?: string;
+    };
+    if (!data.ok || !data.answer) return null;
+    return {
+      question,
+      answer: data.answer,
+      cites: data.cites ?? [],
+      source: "qwen",
+      model: data.model,
+    };
+  } catch {
+    return null;
+  }
 }
 
 export { PROMPTS as ASK_PROMPTS };
