@@ -78,7 +78,7 @@ Scroll to **Structured signal** — **material / changed / implies**.
 ### 4. Ask desk (30s)
 
 Click **What’s the bear case?** or **What would invalidate this?**  
-Show the cites line — answers stay on desk objects.
+Show **Asking Qwen…**, then the answer with **Answered by Qwen** and **from desk objects only** under it. Qwen only sees this desk's data and never suggests orders.
 
 ### 5. Your call (40s)
 
@@ -105,7 +105,7 @@ Research request: only packaged names are on Focus; request others — up to 3 d
 - [ ] Surprise / 180m path / event clock visible  
 - [ ] Signal shows material / changed / implies  
 - [ ] Stress-test shows bull + bear + invalidation  
-- [ ] Ask returns a grounded answer with cites  
+- [ ] Ask returns a Qwen answer grounded in desk objects  
 - [ ] Hold / Review / Idea logs without placing an order  
 - [ ] Live quote (if sidecar up) does not change signal text  
 - [ ] Claims stay honest — see **CLAIMS.md**
@@ -122,7 +122,7 @@ Capture desktop (and one phone frame if easy):
 | 2 | AI + live | AI summary + live market panel |
 | 3 | Signal | material / changed / implies |
 | 4 | Stress | bull / bear / invalidation |
-| 5 | Ask | answered question + cites |
+| 5 | Ask | Qwen answer + "Answered by Qwen" line |
 | 6 | Verdict | Hold/Review/Idea strip + toast or journal |
 | 7 | Honesty | FAQ open + research request + S2 footer |
 
