@@ -12,8 +12,8 @@ const FAQS = [
     a: "No. Live quotes are market context only. Signal, stress-test, and Ask answers come from the research snapshot, not the live ticker.",
   },
   {
-    q: "How often do research packages update?",
-    a: "A GitHub Action polls SEC about every 3 hours, enriches Bitget candles when it can, and rebuilds the desk snapshot. Surprise still needs a pre-event consensus row; without it Surprise shows as —.",
+    q: "Why doesn’t the 180m path change?",
+    a: "It measures the rToken’s move in the 180 minutes after an earnings filing. JPM’s −1.55% is the move after its July 14 print; that window is over, so the number stays fixed. A new path appears only when a new earnings filing comes in (JPM’s next is expected around mid-October). The desk checks SEC for new filings about every 3 hours.",
   },
   {
     q: "What is EDGAR acceptance?",
