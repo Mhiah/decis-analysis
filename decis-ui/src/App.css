@@ -1113,8 +1113,8 @@ button, select, input { font: inherit; }
 }
 
 .stress-card.bull { box-shadow: inset 3px 0 0 var(--ink); }
-.stress-card.bear { box-shadow: inset 3px 0 0 var(--violet); }
-.stress-card.invalidate { box-shadow: inset 3px 0 0 var(--coral); }
+.stress-card.bear { box-shadow: inset 3px 0 0 var(--ink); }
+.stress-card.invalidate { box-shadow: inset 3px 0 0 var(--ink); }
 
 .advisory-note {
   margin: 14px 0 0;
@@ -1135,8 +1135,8 @@ button, select, input { font: inherit; }
 }
 
 .decision-card.hold { box-shadow: inset 3px 0 0 var(--ink); }
-.decision-card.review { box-shadow: inset 3px 0 0 var(--violet); }
-.decision-card.idea { box-shadow: inset 3px 0 0 var(--coral); }
+.decision-card.review { box-shadow: inset 3px 0 0 var(--ink); }
+.decision-card.idea { box-shadow: inset 3px 0 0 var(--ink); }
 
 .decision-rec {
   margin: 0 0 14px;
@@ -1174,8 +1174,8 @@ button, select, input { font: inherit; }
 }
 
 .verdict-card.hold { box-shadow: inset 3px 0 0 var(--ink); }
-.verdict-card.review { box-shadow: inset 3px 0 0 var(--violet); }
-.verdict-card.idea { box-shadow: inset 3px 0 0 var(--coral); }
+.verdict-card.review { box-shadow: inset 3px 0 0 var(--ink); }
+.verdict-card.idea { box-shadow: inset 3px 0 0 var(--ink); }
 
 .verdict-card.hold:hover:not(:disabled) { background: #111114; color: #fff; }
 .verdict-card.review:hover:not(:disabled) {
@@ -1347,7 +1347,7 @@ button, select, input { font: inherit; }
 }
 
 .playbook li {
-  box-shadow: inset 3px 0 0 var(--violet);
+  box-shadow: inset 3px 0 0 var(--ink);
 }
 
 .ask-lede {
@@ -1397,21 +1397,19 @@ button, select, input { font: inherit; }
 .ask-reply {
   margin-top: 14px;
   border-radius: 16px;
-  background: var(--ink);
-  border: 1px solid var(--ink);
-  color: #fff;
+  background: #f8f7fc;
+  border: 1px solid var(--line);
   padding: 14px 16px;
 }
 
 .ask-q {
   margin: 0 0 8px;
   font-weight: 650;
-  color: #fff;
 }
 
 .ask-a {
   margin: 0;
-  color: #fff;
+  color: var(--ink);
   line-height: 1.45;
 }
 
@@ -1419,7 +1417,7 @@ button, select, input { font: inherit; }
   margin: 10px 0 0;
   font-size: 0.72rem;
   font-weight: 650;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--violet);
   letter-spacing: 0.02em;
 }
 
@@ -1430,7 +1428,7 @@ button, select, input { font: inherit; }
 .ask-source {
   font-size: 0.62rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.75;
 }
 
 .faq-list {
