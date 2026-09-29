@@ -3,7 +3,7 @@
 Status: **approved · UI complete (pre-demo)**  
 Track: Bitget AI Hackathon — **AI Trading Desk**  
 Date: 2026-09-16  
-Updated: 2026-09-16 (aligned to shipped desk)
+Updated: 2026-09-29 (IAA origin and Qwen in Ask, aligned with README)
 
 ---
 
@@ -11,7 +11,7 @@ Updated: 2026-09-16 (aligned to shipped desk)
 
 **AI processes the research, argues against itself, and hands you the call.**
 
-**Decis Analysis** is a natural-language research workstation for Bitget rTokens around earnings and related evidence. AI ingests IAA research and surfaces it as structured signal — material / changed / implies — then stress-tests the thesis (bull, bear, invalidation). The trader keeps the final call (Hold / Review / Idea). Optional local loops: draft ticket, post-trade review & playbook. No exchange orders.
+**Decis Analysis** is a natural-language research workstation for Bitget rTokens around earnings and related evidence. AI ingests research from **IAA**, our SEC + Bitget research engine, and surfaces it as structured signal — material / changed / implies — then stress-tests the thesis (bull, bear, invalidation). The trader keeps the final call (Hold / Review / Idea). The **Ask** panel is answered by **Qwen** from the desk's own objects. Optional local loops: draft ticket, post-trade review & playbook. No exchange orders.
 
 ---
 
@@ -21,10 +21,21 @@ Updated: 2026-09-16 (aligned to shipped desk)
 |--|--|
 | **Product** | Decis Analysis |
 | **Hackathon track** | AI Trading Desk |
-| **Backend research** | IAA artifacts (events, scores, paths) via frozen `desk_snapshot` |
+| **Backend research** | IAA artifacts (events, scores, paths) via `desk_snapshot`, refreshed every 3h |
+| **Language model** | Qwen, in Ask only (Bitget hackathon endpoint or Alibaba Cloud Model Studio) |
 | **Primary sub-theme** | Personalized research workstation |
 | **Also covers** | Signal generation; decision stress-testing; local execution assist; post-trade review & self-development |
 | **Explicitly not** | Proven alpha claim; live/paper Bitget order routing; Night Desk; Alpha Factory leaderboard-as-product |
+
+---
+
+## 2a. Origin: IAA
+
+**IAA** (`research/iaa/`) is the read-only research engine behind Decis. It finds SEC Item 2.02 earnings filings, extracts hash-verified actuals, scores surprise against point-in-time consensus, collects Bitget 1m rToken candles, aligns them without look-ahead, and replays the 180 minutes after the filing.
+
+IAA came first, as a test of whether the rToken reaction to earnings could be traded. On 30 events with a 10-event chronological holdout, direction accuracy was 0.50 and, after round-trip costs, every challenger took zero holdout trades. Paper execution was blocked (no historical bid/ask). Posture: `strategyEdgeValidated: false` (`research/posture.json`).
+
+The research explained *what happened* well but could not justify automated trading, so it became **Decis**: a desk that shows the evidence, argues against itself, and stops at the human call.
 
 ---
 
@@ -43,7 +54,7 @@ Updated: 2026-09-16 (aligned to shipped desk)
 2. **Ingest** — load snapshot evidence for that focus.  
 3. **Signal** — structured read: material / changed / implies (+ confidence notes).  
 4. **Stress-test** — thesis summary, bull, bear, invalidation, advisory note.  
-5. **Ask (optional)** — constrained NL Q&A over those objects only.  
+5. **Ask (optional)** — plain-English questions answered by Qwen over those objects only.  
 6. **Decide** — Hold / Review / Idea + optional short note; local log / export.  
 7. **Optional desk loop** — draft local ticket (Review/Idea) → post-trade review → promote lesson to playbook.
 
@@ -134,9 +145,11 @@ Desk reads frozen `desk_snapshot.json` (rebuild: `python desk/build_desk_snapsho
 
 Required: events, surprises/scores fields used by UI, replay paths, posture metadata (kept in snapshot; not used as a trading-edge claim in UI copy).
 
-Derived in Decis: signal, stress-test, ask replies, confidence score.
+Derived in Decis: signal, stress-test, confidence score (deterministic). Ask replies come from Qwen via `/api/ask` (`decis-ui/api/ask.js`, `decis-ui/api/_qwen.js`), sent only the focused desk objects.
 
-Optional sidecar: `python desk/live_quotes.py` → public ticker for focused token.
+Qwen env (server-side only): `DASHSCOPE_API_KEY` (required), `QWEN_MODEL` (default `qwen-plus`; hosted uses `qwen3.8-max`), `QWEN_BASE_URL` (default Model Studio international; hosted uses `https://hackathon.bitgetops.com/v1`).
+
+Live quotes: hosted Vercel `/api/live/quote`, or local sidecar `python desk/live_quotes.py` → public ticker for focused token.
 
 Focus selector = research packages in the snapshot only.
 
@@ -148,7 +161,7 @@ Focus selector = research packages in the snapshot only.
 2. No live or paper order placement from Decis.  
 3. Clock and evidence limits labeled (e.g. EDGAR fallback).  
 4. Paths are research charts, not executable fills.  
-5. NL answers only from snapshot + derived desk objects.  
+5. NL answers (Qwen) only from snapshot + derived desk objects; no order, sizing, or edge language; invented cites dropped; no template fallback.  
 6. Draft tickets / reviews / playbook are local-only.
 
 ---
@@ -169,7 +182,9 @@ Focus selector = research packages in the snapshot only.
 ## 11. NL layer
 
 **v1 (shipped):** Deterministic generators for signal, stress-test and AI summary.  
-**v1.1 (shipped, opt-in):** Qwen (Model Studio) rewrites Ask answers only over structured objects already produced; cites are filtered to an allow-list; Ask has no template fallback; if Qwen is unavailable it says so.
+**v1.1 (shipped):** Ask is answered by **Qwen** (Bitget hackathon endpoint or Alibaba Cloud Model Studio, OpenAI-compatible API) over the structured objects already produced. The system prompt forbids outside data, order advice and edge claims; replies must be JSON; cites are filtered to an allow-list and not shown in the UI. There is no template fallback: if Qwen is unavailable, Ask says so.
+
+Why Qwen only in Ask: every number on the desk should trace back to IAA research, so the model explains the research rather than producing it.
 
 ---
 
@@ -178,7 +193,7 @@ Focus selector = research packages in the snapshot only.
 1. Open Decis and pick a research focus.  
 2. See material / changed / implies.  
 3. See thesis + bull / bear / invalidation.  
-4. Ask a constrained question with cites.  
+4. Ask Qwen a plain-English question and get an answer grounded in the desk.  
 5. Log Hold / Review / Idea (+ note) with no order sent; see it in the journal.  
 6. Optionally draft a local ticket and save a post-trade review / playbook lesson.  
 7. Stay honest: no edge claim, no exchange send.
@@ -193,6 +208,7 @@ Focus selector = research packages in the snapshot only.
 | 2 | `desk_snapshot` schema + rebuild | **done** |
 | 3 | Desk UI | **done** (`decis-ui/`) |
 | 4 | Generators + Ask desk | **done** |
+| 4a | Qwen in Ask | **done** (Vercel env vars) |
 | 5 | Submit pack (DEMO, screenshots/video, host) | **DEMO.md ready** — screenshots/video when capturing |
 
 ---
