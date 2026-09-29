@@ -4,7 +4,7 @@
 
 **[Live desk](https://decis-analysis.vercel.app)** · **[Repo](https://github.com/Mhiah/decis-analysis)** · Bitget AI Hackathon S2 · **AI Trading Desk** track
 
-**Decis Analysis** is a personalized research workstation for Bitget stock **rTokens** around earnings and related evidence. It turns a frozen research package (surprise, 180-minute path, event clock) into a structured signal and a stress-test, then leaves **Hold / Review / Idea** with the trader. Live Bitget quotes sit beside the desk as **market context only**. No exchange orders. No proven-edge claim.
+**Decis Analysis** is a personalized research workstation for Bitget stock **rTokens** around earnings and related evidence. It turns a frozen research package (surprise, 180-minute path, event clock) into a structured signal and a stress-test, then leaves **Hold / Review / Idea** with the trader. Research comes from **IAA**, our SEC + Bitget research engine, and the **Ask** panel is answered by **Qwen** from the desk's own data. Live Bitget quotes sit beside the desk as **market context only**. No exchange orders. No proven-edge claim.
 
 Docs: **[DEMO.md](./DEMO.md)** · **[CLAIMS.md](./CLAIMS.md)** · **[SPEC.md](./SPEC.md)**
 
@@ -21,6 +21,35 @@ Bitget lists the rToken; EDGAR times the print; Decis puts surprise, path, and c
 3. **Human keeps the call.** Hold / Review / Idea are research audit actions. They never become Bitget tickets.
 4. **Live ticker cannot hijack the thesis.** The Live market panel polls Bitget public quotes. It does not drive signal, stress-test, Ask, or the verdict strip.
 5. **Honest research posture.** Calibration ran; cost-aware bake-off challengers took **zero** holdout trades. `strategyEdgeValidated: false`. Paper execution stayed blocked.
+
+---
+
+## IAA: the research behind Decis
+
+**IAA** is the research engine Decis runs on. It lives in [`research/iaa/`](./research/iaa) and answers one question: *when a US company files its earnings with the SEC, how does its Bitget stock rToken react?*
+
+It is read-only by design (`"IAA research prototype. No order execution capability."`). It has no order code and holds no exchange keys.
+
+### What IAA does
+
+| Step | Module | What it does |
+|------|--------|--------------|
+| 1. Find the print | `sec_events.py` | Polls SEC EDGAR for Item 2.02 (earnings) 8-K filings across the tracked universe (AAPL, NVDA, TSLA, MSFT, META, JPM and ~30 more) and records the EDGAR acceptance time |
+| 2. Read the numbers | `actuals.py` | Pulls the earnings exhibit, hash-verifies it, and extracts the reported actuals |
+| 3. Measure the surprise | `consensus.py`, `scoring.py` | Compares actuals with point-in-time consensus. Surprise is only scored when a real consensus row exists; otherwise it stays `—` |
+| 4. Get the tape | `collector.py`, `event_market.py`, `providers.py` | Collects Bitget 1-minute rToken candles around each event, with coverage checks |
+| 5. Line them up honestly | `alignment.py` | Anti-look-ahead alignment: the event clock (t=0) is never placed on a candle that closed before the filing was public |
+| 6. Replay the reaction | `replay.py` | Replays the 180 minutes after t=0. This is the **180m path** on the desk |
+
+### How we came about it
+
+IAA came first. We built it to test a simple idea: that the gap between an earnings filing and the rToken's reaction could be traded. We collected 30 earnings events, scored them, replayed each one against real Bitget candles, and then ran a strict validation (calibration, a chronological holdout of 10 events, and a cost-aware bake-off against simple baselines).
+
+The result was honest but not a trading edge. Holdout direction accuracy was 0.50. Once round-trip costs were included, every challenger strategy took **zero** holdout trades. Paper execution was also blocked, because Bitget does not provide historical bid/ask. The frozen verdict is in [`research/posture.json`](./research/posture.json): `strategyEdgeValidated: false`.
+
+That changed what we built. The research was still useful: it tells a trader exactly *what happened* (surprise, path, clock) around a print. What it could not justify was letting a bot place the trade. So instead of an auto-trader, we turned IAA into **Decis**, a desk that puts the evidence in front of a human, argues against itself, and stops at **Hold / Review / Idea**.
+
+IAA keeps running behind the desk. A GitHub Action runs its modules every 3 hours to pick up new SEC filings and Bitget candles (see [Scheduled research refresh](#scheduled-research-refresh)).
 
 ---
 
@@ -110,7 +139,7 @@ Bitget created the **stock rToken** market Decis researches (e.g. `RJPMUSDT` for
 2. **Read evidence** — Surprise · 180m path · Event clock (+ importance).
 3. **Signal** — material / changed / implies.
 4. **Stress-test** — bull · bear · invalidation.
-5. **Ask (optional)** — constrained Q&A over desk objects, with cites. No invented fills.
+5. **Ask (optional)** — plain-English questions answered by Qwen from desk objects only. No invented fills.
 6. **Decide** — Hold / Review / Idea + optional note; local journal.
 7. **Optional loop** — draft local ticket → post-trade review → promote lesson to playbook.
 
@@ -197,7 +226,8 @@ What it does:
 | Area | Choice |
 |------|--------|
 | UI | React 19, TypeScript, Vite |
-| Hosting | Vercel (`decis-ui` + serverless `/api/live/quote`) |
+| Hosting | Vercel (`decis-ui` + serverless `/api/live/quote`, `/api/ask`) |
+| AI (Ask) | Qwen via OpenAI-compatible API (Alibaba Cloud Model Studio or Bitget hackathon endpoint) |
 | Live quotes | Python sidecar locally; Bitget public market API |
 | Research | Python (`research/iaa/*`): SEC ingest, candles, actuals/scoring, 180m replay |
 | Data contract | `schema/desk_snapshot.schema.json` → `desk_snapshot.json` |
@@ -208,15 +238,28 @@ What it does:
 
 ## Qwen in Ask
 
-Ask can use **Qwen** through Alibaba Cloud Model Studio's OpenAI-compatible API (`decis-ui/api/ask.js`, shared logic in `decis-ui/api/_qwen.js`). Qwen only sees the focused rToken's desk objects (focus, signal, stress, evidence, AI summary), must answer as JSON with cites from an allow-list, and is told never to suggest orders or claim edge. With no key, or on any Qwen error, Ask says so instead of answering.
+The **Ask** panel is powered by **Qwen**, Alibaba Cloud's large language model, added for the Bitget AI Hackathon S2 Qwen track. You can ask a question in plain English about the focused rToken, such as *"Why is the path negative?"* or *"What would invalidate this?"*, and Qwen answers from the desk itself.
+
+### Why Qwen, and why only in Ask
+
+The rest of the desk (signal, stress-test, AI summary) is deterministic code, so every number on screen traces back to IAA research. We wanted a language model where it helps most, which is explaining that research conversationally, without letting it invent facts or push trades. So Qwen gets a narrow job:
+
+- **Desk objects only.** Qwen only sees the focused rToken's desk data (focus, signal, stress-test, evidence, AI summary). It is told never to use outside prices, news, or forecasts.
+- **No orders, no edge claims.** It is told never to suggest placing, sizing, or timing a trade, and never to claim a proven edge (`strategyEdgeValidated: false`).
+- **Checked answers.** Qwen must reply as JSON. Any source it cites that isn't on the desk's allow-list is dropped.
+- **No silent fallback.** If Qwen is not configured or fails, Ask says so instead of making up an answer.
+
+### How it works
+
+`decis-ui/api/ask.js` is a Vercel serverless route. The shared logic in `decis-ui/api/_qwen.js` sends the question and the desk objects to Qwen through its OpenAI-compatible chat completions API. The API key stays on the server and never reaches the browser.
 
 | Env var | Default | Notes |
 |---------|---------|-------|
 | `DASHSCOPE_API_KEY` | — | Required to turn Qwen on |
-| `QWEN_MODEL` | `qwen-plus` | e.g. `qwen-max`, `qwen-turbo` |
-| `QWEN_BASE_URL` | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | Mainland accounts: `https://dashscope.aliyuncs.com/compatible-mode/v1`. Bitget hackathon credits: `https://hackathon.bitgetops.com/v1` |
+| `QWEN_MODEL` | `qwen-plus` | The hosted desk uses `qwen3.8-max` via the hackathon endpoint |
+| `QWEN_BASE_URL` | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | Bitget hackathon credits: `https://hackathon.bitgetops.com/v1`. Mainland Alibaba accounts: `https://dashscope.aliyuncs.com/compatible-mode/v1` |
 
-Local: copy `decis-ui/.env.example` to `decis-ui/.env.local`, fill the key, run `npm run dev` (Vite serves `/api/ask` itself). Hosted: add the same vars in Vercel project settings.
+Local: copy `decis-ui/.env.example` to `decis-ui/.env.local`, fill the key, run `npm run dev` (Vite serves `/api/ask` itself). Hosted: add the same vars in Vercel project settings, then redeploy.
 
 ---
 
@@ -239,7 +282,7 @@ In line with an honest hackathon posture:
 - AI summary card
 - Live Bitget quote panel (local + Vercel)
 - Signal generation + decision stress-testing
-- Constrained Ask with cites
+- Ask, answered by Qwen from desk objects only
 - Hold / Review / Idea + journal
 - Local execution draft + review / playbook
 - FAQ + research request
@@ -279,11 +322,12 @@ decis-analysis/
 ├── decis-ui/                 # Vite React app (Vercel root)
 │   ├── public/desk_snapshot.json
 │   ├── api/live/quote.js     # Hosted Bitget quote
+│   ├── api/ask.js            # Qwen Ask route (+ api/_qwen.js)
 │   └── src/
 ├── research/                 # SEC + Bitget refresh kit
 │   ├── refresh_research.py
 │   ├── data/                 # events / scores / replay / consensus
-│   └── iaa/                  # Vendored slim research modules
+│   └── iaa/                  # IAA research engine (see above)
 ├── .github/workflows/        # research-refresh.yml
 ├── live_quotes.py            # Local quote sidecar :8788
 ├── build_desk_snapshot.py
