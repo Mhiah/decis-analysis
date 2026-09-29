@@ -1397,19 +1397,21 @@ button, select, input { font: inherit; }
 .ask-reply {
   margin-top: 14px;
   border-radius: 16px;
-  background: #f8f7fc;
-  border: 1px solid var(--line);
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: #fff;
   padding: 14px 16px;
 }
 
 .ask-q {
   margin: 0 0 8px;
   font-weight: 650;
+  color: #fff;
 }
 
 .ask-a {
   margin: 0;
-  color: var(--ink);
+  color: #fff;
   line-height: 1.45;
 }
 
@@ -1417,8 +1419,18 @@ button, select, input { font: inherit; }
   margin: 10px 0 0;
   font-size: 0.72rem;
   font-weight: 650;
-  color: var(--violet);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.02em;
+}
+
+.ask-cites + .ask-cites {
+  margin-top: 4px;
+}
+
+.ask-source {
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .faq-list {

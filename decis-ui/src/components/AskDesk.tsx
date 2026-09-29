@@ -95,8 +95,9 @@ export function AskDesk({ view }: AskDeskProps) {
             <p className="ask-cites">Cites: {reply.cites.join(" · ")}</p>
           ) : null}
           <p className="ask-cites">
-            Answered by Qwen ({reply.model ?? "Model Studio"}) from desk objects only
+            Answered by Qwen ({reply.model ?? "Model Studio"})
           </p>
+          <p className="ask-cites ask-source">from desk objects only</p>
         </article>
       ) : null}
     </section>
