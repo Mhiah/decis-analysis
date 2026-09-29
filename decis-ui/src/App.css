@@ -1158,6 +1158,7 @@ button, select, input { font: inherit; }
   border-radius: 18px;
   border: 1px solid var(--line);
   background: #f8f7fc;
+  color: var(--ink);
   padding: 18px 16px;
   cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
@@ -1185,9 +1186,15 @@ button, select, input { font: inherit; }
 }
 
 .verdict-label {
-  font-size: 1.15rem;
+  color: var(--ink);
+  font-size: 0.74rem;
   font-weight: 750;
-  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.verdict-card:hover:not(:disabled) .verdict-label {
+  color: #fff;
 }
 
 .verdict-meaning {

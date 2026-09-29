@@ -39,7 +39,7 @@ export function AskDesk({ view }: AskDeskProps) {
   return (
     <section className="panel-card ask-desk chapter" id="ask">
       <p className="eyebrow">Ask</p>
-      <p className="section-hint">Query the structured desk, with cites</p>
+      <p className="section-hint">Ask Qwen about this desk</p>
 
       <div className="ask-prompts">
         {ASK_PROMPTS.map((prompt) => (
@@ -86,9 +86,6 @@ export function AskDesk({ view }: AskDeskProps) {
         <article className="ask-reply">
           <p className="ask-q">{reply.question}</p>
           <p className="ask-a">{reply.answer}</p>
-          {reply.cites.length ? (
-            <p className="ask-cites">Cites: {reply.cites.join(" · ")}</p>
-          ) : null}
           <p className="ask-cites">
             Answered by Qwen ({reply.model ?? "Model Studio"})
           </p>
