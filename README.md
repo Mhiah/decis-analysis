@@ -10,6 +10,24 @@ Docs: **[DEMO.md](./DEMO.md)** · **[CLAIMS.md](./CLAIMS.md)** · **[SPEC.md](./
 
 ---
 
+## Table of Contents
+
+- [Why Decis](#why-decis)
+- [IAA: the research behind Decis](#iaa-the-research-behind-decis)
+- [Desk stages](#desk-stages)
+- [Architecture](#architecture)
+- [How it uses Bitget](#how-it-uses-bitget)
+- [Core research loop](#core-research-loop)
+- [Setup](#setup)
+- [Scheduled research refresh](#scheduled-research-refresh)
+- [Tech stack](#tech-stack)
+- [Qwen in Ask](#qwen-in-ask)
+- [AI attribution](#ai-attribution)
+- [What is built vs not built](#what-is-built-vs-not-built)
+- [Validation snapshot (research, not live P&L)](#validation-snapshot-research-not-live-pl)
+- [Project layout](#project-layout)
+- [Roadmap](#roadmap)
+
 ## Why Decis
 
 Most trading UIs either dump raw data or jump straight to an order. Earnings research and the rToken tape usually live in different places. Decis keeps them on one desk and stops before the submit button.
