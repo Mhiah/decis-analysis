@@ -168,8 +168,8 @@ Focus selector = research packages in the snapshot only.
 
 ## 11. NL layer
 
-**v1 (shipped):** Deterministic generators + constrained Ask desk templates.  
-**v1.1 (shipped, opt-in):** Qwen (Model Studio) rewrites Ask answers only over structured objects already produced; cites are filtered to an allow-list; deterministic answer stays as fallback.
+**v1 (shipped):** Deterministic generators for signal, stress-test and AI summary.  
+**v1.1 (shipped, opt-in):** Qwen (Model Studio) rewrites Ask answers only over structured objects already produced; cites are filtered to an allow-list; Ask has no template fallback; if Qwen is unavailable it says so.
 
 ---
 

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { GeneratedDeskView } from "../types/desk";
-import { ASK_PROMPTS, askDesk, askQwen, type AskReply } from "../lib/askDesk";
+import { ASK_PROMPTS, askQwen, type AskReply } from "../lib/askDesk";
 
 interface AskDeskProps {
   view: GeneratedDeskView;
@@ -10,7 +10,8 @@ export function AskDesk({ view }: AskDeskProps) {
   const [question, setQuestion] = useState(ASK_PROMPTS[0]);
   const [reply, setReply] = useState<AskReply | null>(null);
   const [thinking, setThinking] = useState(false);
-  const [qwenError, setQwenError] = useState<string | null>(null);
+  const [asked, setAsked] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const pending = useRef<AbortController | null>(null);
 
   useEffect(() => () => pending.current?.abort(), []);
@@ -19,18 +20,18 @@ export function AskDesk({ view }: AskDeskProps) {
     const q = (next ?? question).trim();
     if (!q) return;
     setQuestion(q);
-    // Deterministic answer first; Qwen replaces it only if it answers.
-    setReply({ ...askDesk(view, q), source: "desk" });
+    setAsked(q);
+    setReply(null);
+    setError(null);
 
     pending.current?.abort();
     const controller = new AbortController();
     pending.current = controller;
     setThinking(true);
-    setQwenError(null);
     void askQwen(view, q, controller.signal).then((qwen) => {
       if (controller.signal.aborted) return;
       if ("reply" in qwen) setReply(qwen.reply);
-      else setQwenError(qwen.error);
+      else setError(qwen.error);
       setThinking(false);
     });
   }
@@ -71,6 +72,21 @@ export function AskDesk({ view }: AskDeskProps) {
         </button>
       </form>
 
+      {thinking ? (
+        <article className="ask-reply">
+          <p className="ask-q">{asked}</p>
+          <p className="ask-a">Asking Qwen…</p>
+        </article>
+      ) : null}
+
+      {error ? (
+        <article className="ask-reply">
+          <p className="ask-q">{asked}</p>
+          <p className="ask-a">Qwen could not answer this one. Try again in a moment.</p>
+          <p className="ask-cites">{error}</p>
+        </article>
+      ) : null}
+
       {reply ? (
         <article className="ask-reply">
           <p className="ask-q">{reply.question}</p>
@@ -79,13 +95,7 @@ export function AskDesk({ view }: AskDeskProps) {
             <p className="ask-cites">Cites: {reply.cites.join(" · ")}</p>
           ) : null}
           <p className="ask-cites">
-            {reply.source === "qwen"
-              ? `Answered by Qwen (${reply.model ?? "Model Studio"}) from desk objects only`
-              : thinking
-                ? "Desk template · asking Qwen…"
-                : qwenError
-                  ? `Desk template · Qwen not used: ${qwenError}`
-                  : "Desk template"}
+            Answered by Qwen ({reply.model ?? "Model Studio"}) from desk objects only
           </p>
         </article>
       ) : null}

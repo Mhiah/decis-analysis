@@ -208,13 +208,13 @@ What it does:
 
 ## Qwen in Ask
 
-Ask can use **Qwen** through Alibaba Cloud Model Studio's OpenAI-compatible API (`decis-ui/api/ask.js`, shared logic in `decis-ui/api/_qwen.js`). Qwen only sees the focused rToken's desk objects (focus, signal, stress, evidence, AI summary), must answer as JSON with cites from an allow-list, and is told never to suggest orders or claim edge. With no key, or on any Qwen error, the desk keeps its deterministic answer.
+Ask can use **Qwen** through Alibaba Cloud Model Studio's OpenAI-compatible API (`decis-ui/api/ask.js`, shared logic in `decis-ui/api/_qwen.js`). Qwen only sees the focused rToken's desk objects (focus, signal, stress, evidence, AI summary), must answer as JSON with cites from an allow-list, and is told never to suggest orders or claim edge. With no key, or on any Qwen error, Ask says so instead of answering.
 
 | Env var | Default | Notes |
 |---------|---------|-------|
 | `DASHSCOPE_API_KEY` | — | Required to turn Qwen on |
 | `QWEN_MODEL` | `qwen-plus` | e.g. `qwen-max`, `qwen-turbo` |
-| `QWEN_BASE_URL` | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | Mainland accounts: `https://dashscope.aliyuncs.com/compatible-mode/v1` |
+| `QWEN_BASE_URL` | `https://dashscope-intl.aliyuncs.com/compatible-mode/v1` | Mainland accounts: `https://dashscope.aliyuncs.com/compatible-mode/v1`. Bitget hackathon credits: `https://hackathon.bitgetops.com/v1` |
 
 Local: copy `decis-ui/.env.example` to `decis-ui/.env.local`, fill the key, run `npm run dev` (Vite serves `/api/ask` itself). Hosted: add the same vars in Vercel project settings.
 
@@ -224,7 +224,7 @@ Local: copy `decis-ui/.env.example` to `decis-ui/.env.local`, fill the key, run 
 
 In line with an honest hackathon posture:
 
-- **Product path:** Signal, stress-test, and AI summary are **deterministic code** over structured research objects. Ask answers from deterministic templates first; when `DASHSCOPE_API_KEY` is set, **Qwen** (Alibaba Cloud Model Studio) rewrites the answer from the same desk objects only, and any cite it invents is dropped. See [Qwen in Ask](#qwen-in-ask).
+- **Product path:** Signal, stress-test, and AI summary are **deterministic code** over structured research objects. Ask is answered by **Qwen** (Alibaba Cloud Model Studio or the hackathon endpoint) from those same desk objects only; any cite it invents is dropped. Without a working key, Ask shows an error instead of an answer. See [Qwen in Ask](#qwen-in-ask).
 - **Build path:** Cursor / coding assistants were used while implementing UI, Vercel quote wiring, and the research refresh kit.
 - **Not claimed:** Agentic order placement, plain-English strategy → live execution, or proven alpha.
 
