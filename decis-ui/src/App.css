@@ -1783,6 +1783,8 @@ button, select, input { font: inherit; }
 
   .instrument-select,
   .research-symbol-input {
+    /* In the stacked column layout, the 220px flex-basis would become height. */
+    flex: 0 0 auto;
     width: 100%;
     max-width: none;
     min-width: 0;
