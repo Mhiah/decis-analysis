@@ -72,12 +72,7 @@ export function AskDesk({ view }: AskDeskProps) {
         </button>
       </form>
 
-      {thinking ? (
-        <article className="ask-reply">
-          <p className="ask-q">{asked}</p>
-          <p className="ask-a">Asking Qwen…</p>
-        </article>
-      ) : null}
+      {thinking ? <p className="ask-thinking">Asking Qwen…</p> : null}
 
       {error ? (
         <article className="ask-reply">

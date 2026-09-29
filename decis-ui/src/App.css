@@ -1177,16 +1177,11 @@ button, select, input { font: inherit; }
 .verdict-card.review { box-shadow: inset 3px 0 0 var(--ink); }
 .verdict-card.idea { box-shadow: inset 3px 0 0 var(--ink); }
 
-.verdict-card.hold:hover:not(:disabled) { background: #111114; color: #fff; }
-.verdict-card.review:hover:not(:disabled) {
-  background: var(--violet);
-  color: #fff;
-  box-shadow: inset 3px 0 0 transparent;
-}
+.verdict-card.hold:hover:not(:disabled),
+.verdict-card.review:hover:not(:disabled),
 .verdict-card.idea:hover:not(:disabled) {
-  background: var(--coral);
+  background: #111114;
   color: #fff;
-  box-shadow: inset 3px 0 0 transparent;
 }
 
 .verdict-label {
@@ -1419,6 +1414,12 @@ button, select, input { font: inherit; }
   font-weight: 650;
   color: var(--violet);
   letter-spacing: 0.02em;
+}
+
+.ask-thinking {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .ask-cites + .ask-cites {
