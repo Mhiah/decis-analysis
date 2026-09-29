@@ -31,7 +31,7 @@ Updated: 2026-09-29 (IAA origin and Qwen in Ask, aligned with README)
 
 ## 2a. Origin: IAA
 
-**IAA** (`research/iaa/`) is the read-only research engine behind Decis. It finds SEC Item 2.02 earnings filings, extracts hash-verified actuals, scores surprise against point-in-time consensus, collects Bitget 1m rToken candles, aligns them without look-ahead, and replays the 180 minutes after the filing.
+**IAA** (Information Absorption Alpha, `research/iaa/`) is the read-only research engine behind Decis. It finds SEC Item 2.02 earnings filings, extracts hash-verified actuals, scores surprise against point-in-time consensus, collects Bitget 1m rToken candles, aligns them without look-ahead, and replays the 180 minutes after the filing.
 
 IAA came first, as a test of whether the rToken reaction to earnings could be traded. On 30 events with a 10-event chronological holdout, direction accuracy was 0.50 and, after round-trip costs, every challenger took zero holdout trades. Paper execution was blocked (no historical bid/ask). Posture: `strategyEdgeValidated: false` (`research/posture.json`).
 

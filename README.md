@@ -26,7 +26,7 @@ Bitget lists the rToken; EDGAR times the print; Decis puts surprise, path, and c
 
 ## IAA: the research behind Decis
 
-**IAA** is the research engine Decis runs on. It lives in [`research/iaa/`](./research/iaa) and answers one question: *when a US company files its earnings with the SEC, how does its Bitget stock rToken react?*
+**IAA** (Information Absorption Alpha) is the research engine Decis runs on. It lives in [`research/iaa/`](./research/iaa) and answers one question: *when a US company files its earnings with the SEC, how does its Bitget stock rToken react?*
 
 It is read-only by design (`"IAA research prototype. No order execution capability."`). It has no order code and holds no exchange keys.
 

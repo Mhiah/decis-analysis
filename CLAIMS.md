@@ -3,7 +3,7 @@
 Track: Bitget AI Hackathon · **AI Trading Desk**  
 Product: Decis Analysis  
 One-liner: AI processes the research, argues against itself, and hands you the call.  
-Research engine: **IAA** (`research/iaa/`) · Ask model: **Qwen**
+Research engine: **IAA** (Information Absorption Alpha, `research/iaa/`) · Ask model: **Qwen**
 
 ## Claimed
 
