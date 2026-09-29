@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: research-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -34,17 +38,26 @@ jobs:
         run: |
           git config user.name "decis-research-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add \
-            decis-ui/public/desk_snapshot.json \
-            data/desk_snapshot.json \
-            research/data/events_live.jsonl \
-            research/data/event_scores_live.jsonl \
-            research/data/replay_live.json \
-            research/data/*.csv \
-            research/reports || true
-          if git diff --staged --quiet; then
+          # Stage whole paths: a glob that matches nothing (e.g. research/data/*.csv
+          # before any candles exist) makes `git add` abort and stage nothing.
+          git add research/data decis-ui/public/desk_snapshot.json data/desk_snapshot.json
+
+          # The snapshot's updatedAt changes every run, so ignore it when deciding
+          # whether anything real changed. Research data or snapshot content counts.
+          changed=0
+          git diff --staged --quiet -- research/data || changed=1
+          for f in data/desk_snapshot.json decis-ui/public/desk_snapshot.json; do
+            if ! git show "HEAD:$f" 2>/dev/null | jq -S 'del(.updatedAt)' > /tmp/old.json \
+               || ! jq -S 'del(.updatedAt)' "$f" | cmp -s - /tmp/old.json; then
+              changed=1
+            fi
+          done
+
+          if [ "$changed" = 0 ]; then
             echo "No research changes to commit."
           else
+            git add research/reports
             git commit -m "chore: refresh desk research snapshot"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
             git push
           fi

@@ -1,4 +1,4 @@
-const RESEARCH_INBOX = "iaacontact2026@gmail.com";
+const RESEARCH_INBOX = "mhiah004@gmail.com";
 
 export type MailProvider = "gmail" | "outlook" | "default";
 

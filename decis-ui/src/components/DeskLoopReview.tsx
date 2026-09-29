@@ -147,7 +147,7 @@ export function DeskLoopReview({
               placeholder="What will you do differently…"
             />
           </label>
-          <button type="button" className="btn btn-primary" onClick={save}>
+          <button type="button" className="btn btn-dark" onClick={save}>
             Save review
           </button>
         </div>
