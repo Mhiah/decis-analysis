@@ -70,8 +70,18 @@ def merge_events(existing: list[dict], incoming: list[dict]) -> tuple[list[dict]
             by_id[event_id] = row
             added.append(row)
         else:
-            # Prefer newer exhibit evidence when SEC re-polls the same filing.
-            by_id[event_id] = {**by_id[event_id], **row}
+            # Prefer newer exhibit evidence when SEC re-polls the same filing,
+            # but keep the first retrieval time so an unchanged filing stays
+            # byte-identical and the refresh job has nothing to commit.
+            previous = by_id[event_id]
+            merged_row = {**previous, **row}
+            first_seen = (previous.get("availability_assumption") or {}).get("actual_retrieved_at")
+            if first_seen and isinstance(merged_row.get("availability_assumption"), dict):
+                merged_row["availability_assumption"] = {
+                    **merged_row["availability_assumption"],
+                    "actual_retrieved_at": first_seen,
+                }
+            by_id[event_id] = merged_row
     merged = sorted(by_id.values(), key=lambda item: item.get("published_at") or "")
     return merged, added
 
