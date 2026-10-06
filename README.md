@@ -229,6 +229,8 @@ What it does:
 4. Scores surprise **only** when a consensus row exists in `consensus_live.jsonl`.
 5. Rebuilds `decis-ui/public/desk_snapshot.json` and commits if changed (Vercel redeploys).
 
+**In the commit history:** these runs show up as commits by **`decis-research-bot`** titled `chore: refresh desk research snapshot`. A run that finds nothing new makes no commit, so the commits are less frequent than every 3 hours.
+
 **Repo secret:** `IAA_SEC_USER_AGENT` (project name + contact email). The Action also falls back to the project’s established SEC identity if the secret is empty.
 
 **Honest limits:**
