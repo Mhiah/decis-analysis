@@ -6,6 +6,8 @@
 
 **Decis Analysis** is a personalized research workstation for Bitget stock **rTokens** around earnings and related evidence. It turns a frozen research package (surprise, 180-minute path, event clock) into a structured signal and a stress-test, then leaves **Hold / Review / Idea** with the trader. Research comes from **IAA**, our SEC + Bitget research engine, and the **Ask** panel is answered by **Qwen** from the desk's own data. Live Bitget quotes sit beside the desk as **market context only**. No exchange orders. No proven-edge claim.
 
+> **Automated commits:** the recurring commits by **`decis-research-bot`** titled `chore: refresh desk research snapshot` come from the [scheduled research refresh](#scheduled-research-refresh). Every 3 hours a GitHub Action pulls new SEC earnings filings and Bitget candles, rebuilds the desk snapshot, and commits only when something changed. They are data updates, not hand edits.
+
 Docs: **[DEMO.md](./DEMO.md)** · **[CLAIMS.md](./CLAIMS.md)** · **[SPEC.md](./SPEC.md)**
 
 ---
@@ -228,8 +230,6 @@ What it does:
 3. Fetches Bitget 1m candle windows and replays when possible.
 4. Scores surprise **only** when a consensus row exists in `consensus_live.jsonl`.
 5. Rebuilds `decis-ui/public/desk_snapshot.json` and commits if changed (Vercel redeploys).
-
-**In the commit history:** these runs show up as commits by **`decis-research-bot`** titled `chore: refresh desk research snapshot`. A run that finds nothing new makes no commit, so the commits are less frequent than every 3 hours.
 
 **Repo secret:** `IAA_SEC_USER_AGENT` (project name + contact email). The Action also falls back to the project’s established SEC identity if the secret is empty.
 
