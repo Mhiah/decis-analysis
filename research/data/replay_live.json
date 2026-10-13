@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-09-16T00:30:27.420476+00:00",
+  "created_at": "2026-10-13T18:56:24.811877+00:00",
   "synthetic": false,
-  "replay_count": 30,
+  "replay_count": 32,
   "trade_count": 0,
   "execution_validated": false,
   "replays": [
@@ -43657,6 +43657,2918 @@
         "IMPACT_MODEL_NOT_CALIBRATED",
         "RESIDUAL_DISTRIBUTION_NOT_CALIBRATED",
         "HISTORICAL_QUOTES_UNAVAILABLE"
+      ],
+      "limitations": [
+        "CANDLE_CLOSE_PROXY_NOT_MIDPOINT",
+        "NO_HISTORICAL_BID_ASK",
+        "NO_CALIBRATED_IMPACT_CURVE",
+        "SMALL_EVENT_SAMPLE"
+      ]
+    },
+    {
+      "event_id": "sec-0001628280-26-065582",
+      "token_symbol": "RJPMUSDT",
+      "event_direction": "neutral",
+      "event_magnitude_fraction": 0.0,
+      "published_at": "2026-10-13T10:30:38+00:00",
+      "decision_available_at": "2026-10-13T10:33:53+00:00",
+      "horizon_minutes": 180,
+      "baseline": {
+        "timestamp_ms": 1791887340000,
+        "timestamp_utc": "2026-10-13T10:29:00+00:00",
+        "session": "pre_market",
+        "open": "337",
+        "high": "337.0557",
+        "low": "337",
+        "close": "337.0557",
+        "base_volume": "24.008781",
+        "quote_turnover": "8090.959197"
+      },
+      "baseline_price_kind": "candle_close_proxy",
+      "observations": [
+        {
+          "candle_timestamp_ms": 1791887580000,
+          "available_at_ms": 1791887640000,
+          "elapsed_minutes": 3.3666666666666667,
+          "close": 324.05,
+          "observed_return": -0.038586204001297086,
+          "base_volume": "3910.503667"
+        },
+        {
+          "candle_timestamp_ms": 1791887640000,
+          "available_at_ms": 1791887700000,
+          "elapsed_minutes": 4.366666666666666,
+          "close": 324.5,
+          "observed_return": -0.03725111309495732,
+          "base_volume": "6184.057006"
+        },
+        {
+          "candle_timestamp_ms": 1791887700000,
+          "available_at_ms": 1791887760000,
+          "elapsed_minutes": 5.366666666666666,
+          "close": 325.14,
+          "observed_return": -0.035352317139274,
+          "base_volume": "2775"
+        },
+        {
+          "candle_timestamp_ms": 1791887760000,
+          "available_at_ms": 1791887820000,
+          "elapsed_minutes": 6.366666666666666,
+          "close": 326.75,
+          "observed_return": -0.03057565856325828,
+          "base_volume": "1452.136383"
+        },
+        {
+          "candle_timestamp_ms": 1791887820000,
+          "available_at_ms": 1791887880000,
+          "elapsed_minutes": 7.366666666666666,
+          "close": 326.5,
+          "observed_return": -0.03131737573344706,
+          "base_volume": "1731"
+        },
+        {
+          "candle_timestamp_ms": 1791887880000,
+          "available_at_ms": 1791887940000,
+          "elapsed_minutes": 8.366666666666667,
+          "close": 326.2,
+          "observed_return": -0.032207436337673645,
+          "base_volume": "4367"
+        },
+        {
+          "candle_timestamp_ms": 1791887940000,
+          "available_at_ms": 1791888000000,
+          "elapsed_minutes": 9.366666666666667,
+          "close": 325.0,
+          "observed_return": -0.03576767875457976,
+          "base_volume": "4711.387593"
+        },
+        {
+          "candle_timestamp_ms": 1791888000000,
+          "available_at_ms": 1791888060000,
+          "elapsed_minutes": 10.366666666666667,
+          "close": 325.46,
+          "observed_return": -0.034402919161432455,
+          "base_volume": "1362"
+        },
+        {
+          "candle_timestamp_ms": 1791888060000,
+          "available_at_ms": 1791888120000,
+          "elapsed_minutes": 11.366666666666667,
+          "close": 325.72,
+          "observed_return": -0.03363153330443591,
+          "base_volume": "882"
+        },
+        {
+          "candle_timestamp_ms": 1791888120000,
+          "available_at_ms": 1791888180000,
+          "elapsed_minutes": 12.366666666666667,
+          "close": 325.5,
+          "observed_return": -0.03428424441420219,
+          "base_volume": "1303.6"
+        },
+        {
+          "candle_timestamp_ms": 1791888180000,
+          "available_at_ms": 1791888240000,
+          "elapsed_minutes": 13.366666666666667,
+          "close": 326.12,
+          "observed_return": -0.03244478583213395,
+          "base_volume": "1472.087267"
+        },
+        {
+          "candle_timestamp_ms": 1791888240000,
+          "available_at_ms": 1791888300000,
+          "elapsed_minutes": 14.366666666666667,
+          "close": 326.5,
+          "observed_return": -0.03131737573344706,
+          "base_volume": "4373"
+        },
+        {
+          "candle_timestamp_ms": 1791888300000,
+          "available_at_ms": 1791888360000,
+          "elapsed_minutes": 15.366666666666667,
+          "close": 326.117,
+          "observed_return": -0.032453686438176144,
+          "base_volume": "1298"
+        },
+        {
+          "candle_timestamp_ms": 1791888360000,
+          "available_at_ms": 1791888420000,
+          "elapsed_minutes": 16.366666666666667,
+          "close": 325.7,
+          "observed_return": -0.03369087067805121,
+          "base_volume": "1923"
+        },
+        {
+          "candle_timestamp_ms": 1791888420000,
+          "available_at_ms": 1791888480000,
+          "elapsed_minutes": 17.366666666666667,
+          "close": 327.0,
+          "observed_return": -0.029833941393069496,
+          "base_volume": "11041"
+        },
+        {
+          "candle_timestamp_ms": 1791888480000,
+          "available_at_ms": 1791888540000,
+          "elapsed_minutes": 18.366666666666667,
+          "close": 322.96,
+          "observed_return": -0.04182009086332028,
+          "base_volume": "6269.909124"
+        },
+        {
+          "candle_timestamp_ms": 1791888540000,
+          "available_at_ms": 1791888600000,
+          "elapsed_minutes": 19.366666666666667,
+          "close": 322.0,
+          "observed_return": -0.04466828479684515,
+          "base_volume": "7408.307735"
+        },
+        {
+          "candle_timestamp_ms": 1791888600000,
+          "available_at_ms": 1791888660000,
+          "elapsed_minutes": 20.366666666666667,
+          "close": 322.98,
+          "observed_return": -0.041760753489705094,
+          "base_volume": "6400.5"
+        },
+        {
+          "candle_timestamp_ms": 1791888660000,
+          "available_at_ms": 1791888720000,
+          "elapsed_minutes": 21.366666666666667,
+          "close": 322.24,
+          "observed_return": -0.0439562363134639,
+          "base_volume": "4882.15"
+        },
+        {
+          "candle_timestamp_ms": 1791888720000,
+          "available_at_ms": 1791888780000,
+          "elapsed_minutes": 22.366666666666667,
+          "close": 322.78,
+          "observed_return": -0.042354127225856186,
+          "base_volume": "13717.068901"
+        },
+        {
+          "candle_timestamp_ms": 1791888780000,
+          "available_at_ms": 1791888840000,
+          "elapsed_minutes": 23.366666666666667,
+          "close": 322.5,
+          "observed_return": -0.04318485045646758,
+          "base_volume": "1664"
+        },
+        {
+          "candle_timestamp_ms": 1791888840000,
+          "available_at_ms": 1791888900000,
+          "elapsed_minutes": 24.366666666666667,
+          "close": 322.594,
+          "observed_return": -0.04290596480047659,
+          "base_volume": "3030"
+        },
+        {
+          "candle_timestamp_ms": 1791888900000,
+          "available_at_ms": 1791888960000,
+          "elapsed_minutes": 25.366666666666667,
+          "close": 323.06,
+          "observed_return": -0.04152340399524468,
+          "base_volume": "274"
+        },
+        {
+          "candle_timestamp_ms": 1791888960000,
+          "available_at_ms": 1791889020000,
+          "elapsed_minutes": 26.366666666666667,
+          "close": 323.25,
+          "observed_return": -0.040959698945901235,
+          "base_volume": "756"
+        },
+        {
+          "candle_timestamp_ms": 1791889020000,
+          "available_at_ms": 1791889080000,
+          "elapsed_minutes": 27.366666666666667,
+          "close": 323.8416,
+          "observed_return": -0.039204499434366435,
+          "base_volume": "3421.424529"
+        },
+        {
+          "candle_timestamp_ms": 1791889080000,
+          "available_at_ms": 1791889140000,
+          "elapsed_minutes": 28.366666666666667,
+          "close": 324.0,
+          "observed_return": -0.03873454743533489,
+          "base_volume": "4362.154085"
+        },
+        {
+          "candle_timestamp_ms": 1791889140000,
+          "available_at_ms": 1791889200000,
+          "elapsed_minutes": 29.366666666666667,
+          "close": 323.86,
+          "observed_return": -0.03914990905064053,
+          "base_volume": "1165"
+        },
+        {
+          "candle_timestamp_ms": 1791889200000,
+          "available_at_ms": 1791889260000,
+          "elapsed_minutes": 30.366666666666667,
+          "close": 321.3122,
+          "observed_return": -0.046708897075468436,
+          "base_volume": "22517.532982"
+        },
+        {
+          "candle_timestamp_ms": 1791889260000,
+          "available_at_ms": 1791889320000,
+          "elapsed_minutes": 31.366666666666667,
+          "close": 321.83,
+          "observed_return": -0.04517265247257363,
+          "base_volume": "5979.343463"
+        },
+        {
+          "candle_timestamp_ms": 1791889320000,
+          "available_at_ms": 1791889380000,
+          "elapsed_minutes": 32.36666666666667,
+          "close": 321.53,
+          "observed_return": -0.0460627130768001,
+          "base_volume": "12080"
+        },
+        {
+          "candle_timestamp_ms": 1791889380000,
+          "available_at_ms": 1791889440000,
+          "elapsed_minutes": 33.36666666666667,
+          "close": 322.9178,
+          "observed_return": -0.04194529272164804,
+          "base_volume": "4243.231132"
+        },
+        {
+          "candle_timestamp_ms": 1791889440000,
+          "available_at_ms": 1791889500000,
+          "elapsed_minutes": 34.36666666666667,
+          "close": 323.0,
+          "observed_return": -0.04170141611609002,
+          "base_volume": "2238.030929"
+        },
+        {
+          "candle_timestamp_ms": 1791889500000,
+          "available_at_ms": 1791889560000,
+          "elapsed_minutes": 35.36666666666667,
+          "close": 325.7571,
+          "observed_return": -0.033521462476380104,
+          "base_volume": "8359"
+        },
+        {
+          "candle_timestamp_ms": 1791889560000,
+          "available_at_ms": 1791889620000,
+          "elapsed_minutes": 36.36666666666667,
+          "close": 325.5,
+          "observed_return": -0.03428424441420219,
+          "base_volume": "4638"
+        },
+        {
+          "candle_timestamp_ms": 1791889620000,
+          "available_at_ms": 1791889680000,
+          "elapsed_minutes": 37.36666666666667,
+          "close": 325.65,
+          "observed_return": -0.03383921411208901,
+          "base_volume": "11287"
+        },
+        {
+          "candle_timestamp_ms": 1791889680000,
+          "available_at_ms": 1791889740000,
+          "elapsed_minutes": 38.36666666666667,
+          "close": 329.65,
+          "observed_return": -0.02197173938906838,
+          "base_volume": "23815.971897"
+        },
+        {
+          "candle_timestamp_ms": 1791889740000,
+          "available_at_ms": 1791889800000,
+          "elapsed_minutes": 39.36666666666667,
+          "close": 337.98,
+          "observed_return": 0.0027422767216220834,
+          "base_volume": "32911.445107"
+        },
+        {
+          "candle_timestamp_ms": 1791889800000,
+          "available_at_ms": 1791889860000,
+          "elapsed_minutes": 40.36666666666667,
+          "close": 336.8,
+          "observed_return": -0.0007586283216690637,
+          "base_volume": "32973.930755"
+        },
+        {
+          "candle_timestamp_ms": 1791889860000,
+          "available_at_ms": 1791889920000,
+          "elapsed_minutes": 41.36666666666667,
+          "close": 340.676,
+          "observed_return": 0.010740954684937742,
+          "base_volume": "29491.710398"
+        },
+        {
+          "candle_timestamp_ms": 1791889920000,
+          "available_at_ms": 1791889980000,
+          "elapsed_minutes": 42.36666666666667,
+          "close": 338.56,
+          "observed_return": 0.004463060556459952,
+          "base_volume": "27064.69644"
+        },
+        {
+          "candle_timestamp_ms": 1791889980000,
+          "available_at_ms": 1791890040000,
+          "elapsed_minutes": 43.36666666666667,
+          "close": 339.99,
+          "observed_return": 0.008705682769939882,
+          "base_volume": "40145.250819"
+        },
+        {
+          "candle_timestamp_ms": 1791890040000,
+          "available_at_ms": 1791890100000,
+          "elapsed_minutes": 44.36666666666667,
+          "close": 338.21,
+          "observed_return": 0.003424656518195679,
+          "base_volume": "15860"
+        },
+        {
+          "candle_timestamp_ms": 1791890100000,
+          "available_at_ms": 1791890160000,
+          "elapsed_minutes": 45.36666666666667,
+          "close": 338.09,
+          "observed_return": 0.003068632276505001,
+          "base_volume": "22065.002995"
+        },
+        {
+          "candle_timestamp_ms": 1791890160000,
+          "available_at_ms": 1791890220000,
+          "elapsed_minutes": 46.36666666666667,
+          "close": 336.01,
+          "observed_return": -0.0031024545794656744,
+          "base_volume": "22669"
+        },
+        {
+          "candle_timestamp_ms": 1791890220000,
+          "available_at_ms": 1791890280000,
+          "elapsed_minutes": 47.36666666666667,
+          "close": 336.71,
+          "observed_return": -0.0010256465029371276,
+          "base_volume": "6401"
+        },
+        {
+          "candle_timestamp_ms": 1791890280000,
+          "available_at_ms": 1791890340000,
+          "elapsed_minutes": 48.36666666666667,
+          "close": 337.96,
+          "observed_return": 0.0026829393480067854,
+          "base_volume": "10587"
+        },
+        {
+          "candle_timestamp_ms": 1791890340000,
+          "available_at_ms": 1791890400000,
+          "elapsed_minutes": 49.36666666666667,
+          "close": 338.655,
+          "observed_return": 0.004744913081131674,
+          "base_volume": "16382.506495"
+        },
+        {
+          "candle_timestamp_ms": 1791890400000,
+          "available_at_ms": 1791890460000,
+          "elapsed_minutes": 50.36666666666667,
+          "close": 337.9154,
+          "observed_return": 0.002550617004845046,
+          "base_volume": "6706.930755"
+        },
+        {
+          "candle_timestamp_ms": 1791890460000,
+          "available_at_ms": 1791890520000,
+          "elapsed_minutes": 51.36666666666667,
+          "close": 336.8808,
+          "observed_return": -0.0005189053322640635,
+          "base_volume": "5337.064313"
+        },
+        {
+          "candle_timestamp_ms": 1791890520000,
+          "available_at_ms": 1791890580000,
+          "elapsed_minutes": 52.36666666666667,
+          "close": 338.21,
+          "observed_return": 0.003424656518195679,
+          "base_volume": "4857"
+        },
+        {
+          "candle_timestamp_ms": 1791890580000,
+          "available_at_ms": 1791890640000,
+          "elapsed_minutes": 53.36666666666667,
+          "close": 339.042,
+          "observed_return": 0.005893091260583905,
+          "base_volume": "4782.849"
+        },
+        {
+          "candle_timestamp_ms": 1791890640000,
+          "available_at_ms": 1791890700000,
+          "elapsed_minutes": 54.36666666666667,
+          "close": 338.49,
+          "observed_return": 0.0042553797488071865,
+          "base_volume": "8180"
+        },
+        {
+          "candle_timestamp_ms": 1791890700000,
+          "available_at_ms": 1791890760000,
+          "elapsed_minutes": 55.36666666666667,
+          "close": 339.0,
+          "observed_return": 0.00576848277599229,
+          "base_volume": "2816"
+        },
+        {
+          "candle_timestamp_ms": 1791890760000,
+          "available_at_ms": 1791890820000,
+          "elapsed_minutes": 56.36666666666667,
+          "close": 338.6,
+          "observed_return": 0.004581735303690326,
+          "base_volume": "1384"
+        },
+        {
+          "candle_timestamp_ms": 1791890820000,
+          "available_at_ms": 1791890880000,
+          "elapsed_minutes": 57.36666666666667,
+          "close": 338.31,
+          "observed_return": 0.003721343386271281,
+          "base_volume": "11801"
+        },
+        {
+          "candle_timestamp_ms": 1791890880000,
+          "available_at_ms": 1791890940000,
+          "elapsed_minutes": 58.36666666666667,
+          "close": 337.155,
+          "observed_return": 0.0002946100599989787,
+          "base_volume": "2657"
+        },
+        {
+          "candle_timestamp_ms": 1791890940000,
+          "available_at_ms": 1791891000000,
+          "elapsed_minutes": 59.36666666666667,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "2023.0031"
+        },
+        {
+          "candle_timestamp_ms": 1791891000000,
+          "available_at_ms": 1791891060000,
+          "elapsed_minutes": 60.36666666666667,
+          "close": 338.2,
+          "observed_return": 0.003394987831388141,
+          "base_volume": "5972.9734"
+        },
+        {
+          "candle_timestamp_ms": 1791891060000,
+          "available_at_ms": 1791891120000,
+          "elapsed_minutes": 61.36666666666667,
+          "close": 337.31,
+          "observed_return": 0.0007544747055159284,
+          "base_volume": "3657.267014"
+        },
+        {
+          "candle_timestamp_ms": 1791891120000,
+          "available_at_ms": 1791891180000,
+          "elapsed_minutes": 62.36666666666667,
+          "close": 336.97,
+          "observed_return": -0.00025426064594058495,
+          "base_volume": "10200.3"
+        },
+        {
+          "candle_timestamp_ms": 1791891180000,
+          "available_at_ms": 1791891240000,
+          "elapsed_minutes": 63.36666666666667,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "18697.937092"
+        },
+        {
+          "candle_timestamp_ms": 1791891240000,
+          "available_at_ms": 1791891300000,
+          "elapsed_minutes": 64.36666666666666,
+          "close": 337.05,
+          "observed_return": -1.6911151480281106e-05,
+          "base_volume": "1523"
+        },
+        {
+          "candle_timestamp_ms": 1791891300000,
+          "available_at_ms": 1791891360000,
+          "elapsed_minutes": 65.36666666666666,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "604.9196"
+        },
+        {
+          "candle_timestamp_ms": 1791891360000,
+          "available_at_ms": 1791891420000,
+          "elapsed_minutes": 66.36666666666666,
+          "close": 337.9,
+          "observed_return": 0.0025049272271615575,
+          "base_volume": "4905.213"
+        },
+        {
+          "candle_timestamp_ms": 1791891420000,
+          "available_at_ms": 1791891480000,
+          "elapsed_minutes": 67.36666666666666,
+          "close": 337.1,
+          "observed_return": 0.0001314322825574088,
+          "base_volume": "1795.044"
+        },
+        {
+          "candle_timestamp_ms": 1791891480000,
+          "available_at_ms": 1791891540000,
+          "elapsed_minutes": 68.36666666666666,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "3062.956"
+        },
+        {
+          "candle_timestamp_ms": 1791891540000,
+          "available_at_ms": 1791891600000,
+          "elapsed_minutes": 69.36666666666666,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "756.098"
+        },
+        {
+          "candle_timestamp_ms": 1791891600000,
+          "available_at_ms": 1791891660000,
+          "elapsed_minutes": 70.36666666666666,
+          "close": 337.0946,
+          "observed_return": 0.00011541119168145819,
+          "base_volume": "948.0777"
+        },
+        {
+          "candle_timestamp_ms": 1791891660000,
+          "available_at_ms": 1791891720000,
+          "elapsed_minutes": 71.36666666666666,
+          "close": 337.21,
+          "observed_return": 0.00045778783744054863,
+          "base_volume": "1043.2036"
+        },
+        {
+          "candle_timestamp_ms": 1791891720000,
+          "available_at_ms": 1791891780000,
+          "elapsed_minutes": 72.36666666666666,
+          "close": 337.32,
+          "observed_return": 0.0007841433923234664,
+          "base_volume": "359.962"
+        },
+        {
+          "candle_timestamp_ms": 1791891780000,
+          "available_at_ms": 1791891840000,
+          "elapsed_minutes": 73.36666666666666,
+          "close": 337.18,
+          "observed_return": 0.0003687817770179347,
+          "base_volume": "644.378"
+        },
+        {
+          "candle_timestamp_ms": 1791891840000,
+          "available_at_ms": 1791891900000,
+          "elapsed_minutes": 74.36666666666666,
+          "close": 338.0,
+          "observed_return": 0.0028016140952371593,
+          "base_volume": "3001"
+        },
+        {
+          "candle_timestamp_ms": 1791891900000,
+          "available_at_ms": 1791891960000,
+          "elapsed_minutes": 75.36666666666666,
+          "close": 337.8,
+          "observed_return": 0.0022082403590861777,
+          "base_volume": "992"
+        },
+        {
+          "candle_timestamp_ms": 1791891960000,
+          "available_at_ms": 1791892020000,
+          "elapsed_minutes": 76.36666666666666,
+          "close": 337.4687,
+          "observed_return": 0.0012253167651519181,
+          "base_volume": "534"
+        },
+        {
+          "candle_timestamp_ms": 1791892020000,
+          "available_at_ms": 1791892080000,
+          "elapsed_minutes": 77.36666666666666,
+          "close": 337.9386,
+          "observed_return": 0.002619448358238685,
+          "base_volume": "2663"
+        },
+        {
+          "candle_timestamp_ms": 1791892080000,
+          "available_at_ms": 1791892140000,
+          "elapsed_minutes": 78.36666666666666,
+          "close": 338.69,
+          "observed_return": 0.004848753484958168,
+          "base_volume": "12898"
+        },
+        {
+          "candle_timestamp_ms": 1791892140000,
+          "available_at_ms": 1791892200000,
+          "elapsed_minutes": 79.36666666666666,
+          "close": 338.7488,
+          "observed_return": 0.005023205363386518,
+          "base_volume": "1362"
+        },
+        {
+          "candle_timestamp_ms": 1791892200000,
+          "available_at_ms": 1791892260000,
+          "elapsed_minutes": 80.36666666666666,
+          "close": 338.0,
+          "observed_return": 0.0028016140952371593,
+          "base_volume": "834"
+        },
+        {
+          "candle_timestamp_ms": 1791892260000,
+          "available_at_ms": 1791892320000,
+          "elapsed_minutes": 81.36666666666666,
+          "close": 337.3,
+          "observed_return": 0.0007248060187086125,
+          "base_volume": "1578.00848"
+        },
+        {
+          "candle_timestamp_ms": 1791892320000,
+          "available_at_ms": 1791892380000,
+          "elapsed_minutes": 82.36666666666666,
+          "close": 336.24,
+          "observed_return": -0.0024200747828919678,
+          "base_volume": "6294"
+        },
+        {
+          "candle_timestamp_ms": 1791892380000,
+          "available_at_ms": 1791892440000,
+          "elapsed_minutes": 83.36666666666666,
+          "close": 336.3921,
+          "observed_return": -0.0019688140565490286,
+          "base_volume": "1950"
+        },
+        {
+          "candle_timestamp_ms": 1791892440000,
+          "available_at_ms": 1791892500000,
+          "elapsed_minutes": 84.36666666666666,
+          "close": 336.27,
+          "observed_return": -0.002331068722469354,
+          "base_volume": "5857.01"
+        },
+        {
+          "candle_timestamp_ms": 1791892500000,
+          "available_at_ms": 1791892560000,
+          "elapsed_minutes": 85.36666666666666,
+          "close": 336.1,
+          "observed_return": -0.0028354363981976105,
+          "base_volume": "2585"
+        },
+        {
+          "candle_timestamp_ms": 1791892560000,
+          "available_at_ms": 1791892620000,
+          "elapsed_minutes": 86.36666666666666,
+          "close": 335.9999,
+          "observed_return": -0.0031324199531411745,
+          "base_volume": "1923"
+        },
+        {
+          "candle_timestamp_ms": 1791892620000,
+          "available_at_ms": 1791892680000,
+          "elapsed_minutes": 87.36666666666666,
+          "close": 335.8493,
+          "observed_return": -0.003579230376462905,
+          "base_volume": "1022.57968"
+        },
+        {
+          "candle_timestamp_ms": 1791892680000,
+          "available_at_ms": 1791892740000,
+          "elapsed_minutes": 88.36666666666666,
+          "close": 335.5809,
+          "observed_return": -0.004375537930377704,
+          "base_volume": "1191"
+        },
+        {
+          "candle_timestamp_ms": 1791892740000,
+          "available_at_ms": 1791892800000,
+          "elapsed_minutes": 89.36666666666666,
+          "close": 335.4313,
+          "observed_return": -0.004819381485018592,
+          "base_volume": "3422.000936"
+        },
+        {
+          "candle_timestamp_ms": 1791892800000,
+          "available_at_ms": 1791892860000,
+          "elapsed_minutes": 90.36666666666666,
+          "close": 336.0,
+          "observed_return": -0.0031321232662732124,
+          "base_volume": "4674.5"
+        },
+        {
+          "candle_timestamp_ms": 1791892860000,
+          "available_at_ms": 1791892920000,
+          "elapsed_minutes": 91.36666666666666,
+          "close": 335.79,
+          "observed_return": -0.003755165689231732,
+          "base_volume": "2163"
+        },
+        {
+          "candle_timestamp_ms": 1791892920000,
+          "available_at_ms": 1791892980000,
+          "elapsed_minutes": 92.36666666666666,
+          "close": 334.77,
+          "observed_return": -0.006781371743602049,
+          "base_volume": "25814"
+        },
+        {
+          "candle_timestamp_ms": 1791892980000,
+          "available_at_ms": 1791893040000,
+          "elapsed_minutes": 93.36666666666666,
+          "close": 334.9518,
+          "observed_return": -0.006241995017440716,
+          "base_volume": "5670.014939"
+        },
+        {
+          "candle_timestamp_ms": 1791893040000,
+          "available_at_ms": 1791893100000,
+          "elapsed_minutes": 94.36666666666666,
+          "close": 334.76,
+          "observed_return": -0.006811040430409587,
+          "base_volume": "11941"
+        },
+        {
+          "candle_timestamp_ms": 1791893100000,
+          "available_at_ms": 1791893160000,
+          "elapsed_minutes": 95.36666666666666,
+          "close": 335.0,
+          "observed_return": -0.006098991947028343,
+          "base_volume": "10981.81604"
+        },
+        {
+          "candle_timestamp_ms": 1791893160000,
+          "available_at_ms": 1791893220000,
+          "elapsed_minutes": 96.36666666666666,
+          "close": 334.75,
+          "observed_return": -0.006840709117217125,
+          "base_volume": "7373.04267"
+        },
+        {
+          "candle_timestamp_ms": 1791893220000,
+          "available_at_ms": 1791893280000,
+          "elapsed_minutes": 97.36666666666666,
+          "close": 334.98,
+          "observed_return": -0.006158329320643419,
+          "base_volume": "1828"
+        },
+        {
+          "candle_timestamp_ms": 1791893280000,
+          "available_at_ms": 1791893340000,
+          "elapsed_minutes": 98.36666666666666,
+          "close": 335.0,
+          "observed_return": -0.006098991947028343,
+          "base_volume": "792"
+        },
+        {
+          "candle_timestamp_ms": 1791893340000,
+          "available_at_ms": 1791893400000,
+          "elapsed_minutes": 99.36666666666666,
+          "close": 334.9,
+          "observed_return": -0.0063956788151039445,
+          "base_volume": "611"
+        },
+        {
+          "candle_timestamp_ms": 1791893400000,
+          "available_at_ms": 1791893460000,
+          "elapsed_minutes": 100.36666666666666,
+          "close": 334.8811,
+          "observed_return": -0.006451752633170105,
+          "base_volume": "573"
+        },
+        {
+          "candle_timestamp_ms": 1791893460000,
+          "available_at_ms": 1791893520000,
+          "elapsed_minutes": 101.36666666666666,
+          "close": 335.04,
+          "observed_return": -0.00598031719979808,
+          "base_volume": "467"
+        },
+        {
+          "candle_timestamp_ms": 1791893520000,
+          "available_at_ms": 1791893580000,
+          "elapsed_minutes": 102.36666666666666,
+          "close": 335.0,
+          "observed_return": -0.006098991947028343,
+          "base_volume": "577"
+        },
+        {
+          "candle_timestamp_ms": 1791893580000,
+          "available_at_ms": 1791893640000,
+          "elapsed_minutes": 103.36666666666666,
+          "close": 334.8001,
+          "observed_return": -0.006692068996311362,
+          "base_volume": "750"
+        },
+        {
+          "candle_timestamp_ms": 1791893640000,
+          "available_at_ms": 1791893700000,
+          "elapsed_minutes": 104.36666666666666,
+          "close": 334.81,
+          "observed_return": -0.006662696996371786,
+          "base_volume": "694"
+        },
+        {
+          "candle_timestamp_ms": 1791893700000,
+          "available_at_ms": 1791893760000,
+          "elapsed_minutes": 105.36666666666666,
+          "close": 334.8104,
+          "observed_return": -0.006661510248899494,
+          "base_volume": "392.38"
+        },
+        {
+          "candle_timestamp_ms": 1791893760000,
+          "available_at_ms": 1791893820000,
+          "elapsed_minutes": 106.36666666666666,
+          "close": 334.9,
+          "observed_return": -0.0063956788151039445,
+          "base_volume": "302"
+        },
+        {
+          "candle_timestamp_ms": 1791893820000,
+          "available_at_ms": 1791893880000,
+          "elapsed_minutes": 107.36666666666666,
+          "close": 335.2197,
+          "observed_return": -0.0054471708978665045,
+          "base_volume": "183"
+        },
+        {
+          "candle_timestamp_ms": 1791893880000,
+          "available_at_ms": 1791893940000,
+          "elapsed_minutes": 108.36666666666666,
+          "close": 335.2,
+          "observed_return": -0.005505618210877361,
+          "base_volume": "571"
+        },
+        {
+          "candle_timestamp_ms": 1791893940000,
+          "available_at_ms": 1791894000000,
+          "elapsed_minutes": 109.36666666666666,
+          "close": 334.8,
+          "observed_return": -0.006692365683179324,
+          "base_volume": "16545"
+        },
+        {
+          "candle_timestamp_ms": 1791894000000,
+          "available_at_ms": 1791894060000,
+          "elapsed_minutes": 110.36666666666666,
+          "close": 334.1,
+          "observed_return": -0.008769173759707871,
+          "base_volume": "2583"
+        },
+        {
+          "candle_timestamp_ms": 1791894060000,
+          "available_at_ms": 1791894120000,
+          "elapsed_minutes": 111.36666666666666,
+          "close": 333.83,
+          "observed_return": -0.009570228303511952,
+          "base_volume": "3096.364462"
+        },
+        {
+          "candle_timestamp_ms": 1791894120000,
+          "available_at_ms": 1791894180000,
+          "elapsed_minutes": 112.36666666666666,
+          "close": 333.65,
+          "observed_return": -0.010104264666047857,
+          "base_volume": "907.003055"
+        },
+        {
+          "candle_timestamp_ms": 1791894180000,
+          "available_at_ms": 1791894240000,
+          "elapsed_minutes": 113.36666666666666,
+          "close": 333.56,
+          "observed_return": -0.0103712828473157,
+          "base_volume": "1714.00594"
+        },
+        {
+          "candle_timestamp_ms": 1791894240000,
+          "available_at_ms": 1791894300000,
+          "elapsed_minutes": 114.36666666666666,
+          "close": 333.19,
+          "observed_return": -0.01146902425919516,
+          "base_volume": "722.127362"
+        },
+        {
+          "candle_timestamp_ms": 1791894300000,
+          "available_at_ms": 1791894360000,
+          "elapsed_minutes": 115.36666666666666,
+          "close": 333.5,
+          "observed_return": -0.010549294968161038,
+          "base_volume": "5382.149915"
+        },
+        {
+          "candle_timestamp_ms": 1791894360000,
+          "available_at_ms": 1791894420000,
+          "elapsed_minutes": 116.36666666666666,
+          "close": 333.19,
+          "observed_return": -0.01146902425919516,
+          "base_volume": "3866"
+        },
+        {
+          "candle_timestamp_ms": 1791894420000,
+          "available_at_ms": 1791894480000,
+          "elapsed_minutes": 117.36666666666666,
+          "close": 332.97,
+          "observed_return": -0.012121735368961217,
+          "base_volume": "8065"
+        },
+        {
+          "candle_timestamp_ms": 1791894480000,
+          "available_at_ms": 1791894540000,
+          "elapsed_minutes": 118.36666666666666,
+          "close": 333.0,
+          "observed_return": -0.012032729308538603,
+          "base_volume": "848"
+        },
+        {
+          "candle_timestamp_ms": 1791894540000,
+          "available_at_ms": 1791894600000,
+          "elapsed_minutes": 119.36666666666666,
+          "close": 333.0,
+          "observed_return": -0.012032729308538603,
+          "base_volume": "2870"
+        },
+        {
+          "candle_timestamp_ms": 1791894600000,
+          "available_at_ms": 1791894660000,
+          "elapsed_minutes": 120.36666666666666,
+          "close": 332.55,
+          "observed_return": -0.013367820214878368,
+          "base_volume": "1886"
+        },
+        {
+          "candle_timestamp_ms": 1791894660000,
+          "available_at_ms": 1791894720000,
+          "elapsed_minutes": 121.36666666666666,
+          "close": 332.5212,
+          "observed_return": -0.013453266032884104,
+          "base_volume": "922"
+        },
+        {
+          "candle_timestamp_ms": 1791894720000,
+          "available_at_ms": 1791894780000,
+          "elapsed_minutes": 122.36666666666666,
+          "close": 332.5212,
+          "observed_return": -0.013453266032884104,
+          "base_volume": "466.663628"
+        },
+        {
+          "candle_timestamp_ms": 1791894780000,
+          "available_at_ms": 1791894840000,
+          "elapsed_minutes": 123.36666666666666,
+          "close": 332.75,
+          "observed_return": -0.012774446478727386,
+          "base_volume": "596"
+        },
+        {
+          "candle_timestamp_ms": 1791894840000,
+          "available_at_ms": 1791894900000,
+          "elapsed_minutes": 124.36666666666666,
+          "close": 332.6,
+          "observed_return": -0.013219476780840567,
+          "base_volume": "2258"
+        },
+        {
+          "candle_timestamp_ms": 1791894900000,
+          "available_at_ms": 1791894960000,
+          "elapsed_minutes": 125.36666666666666,
+          "close": 332.5,
+          "observed_return": -0.013516163648916169,
+          "base_volume": "2150"
+        },
+        {
+          "candle_timestamp_ms": 1791894960000,
+          "available_at_ms": 1791895020000,
+          "elapsed_minutes": 126.36666666666666,
+          "close": 332.4228,
+          "observed_return": -0.013745205911070535,
+          "base_volume": "1472"
+        },
+        {
+          "candle_timestamp_ms": 1791895020000,
+          "available_at_ms": 1791895080000,
+          "elapsed_minutes": 127.36666666666666,
+          "close": 332.62,
+          "observed_return": -0.013160139407225602,
+          "base_volume": "489"
+        },
+        {
+          "candle_timestamp_ms": 1791895080000,
+          "available_at_ms": 1791895140000,
+          "elapsed_minutes": 128.36666666666667,
+          "close": 332.4396,
+          "observed_return": -0.0136953625172338,
+          "base_volume": "999.053363"
+        },
+        {
+          "candle_timestamp_ms": 1791895140000,
+          "available_at_ms": 1791895200000,
+          "elapsed_minutes": 129.36666666666667,
+          "close": 332.5,
+          "observed_return": -0.013516163648916169,
+          "base_volume": "5341"
+        },
+        {
+          "candle_timestamp_ms": 1791895200000,
+          "available_at_ms": 1791895260000,
+          "elapsed_minutes": 130.36666666666667,
+          "close": 333.4677,
+          "observed_return": -0.010645124826549557,
+          "base_volume": "2798.521642"
+        },
+        {
+          "candle_timestamp_ms": 1791895260000,
+          "available_at_ms": 1791895320000,
+          "elapsed_minutes": 131.36666666666667,
+          "close": 332.16,
+          "observed_return": -0.014524899000372904,
+          "base_volume": "1031.99575"
+        },
+        {
+          "candle_timestamp_ms": 1791895320000,
+          "available_at_ms": 1791895380000,
+          "elapsed_minutes": 132.36666666666667,
+          "close": 332.35,
+          "observed_return": -0.01396119395102935,
+          "base_volume": "35"
+        },
+        {
+          "candle_timestamp_ms": 1791895380000,
+          "available_at_ms": 1791895440000,
+          "elapsed_minutes": 133.36666666666667,
+          "close": 332.11,
+          "observed_return": -0.014673242434410705,
+          "base_volume": "2225"
+        },
+        {
+          "candle_timestamp_ms": 1791895440000,
+          "available_at_ms": 1791895500000,
+          "elapsed_minutes": 134.36666666666667,
+          "close": 331.06,
+          "observed_return": -0.017788454549203636,
+          "base_volume": "3486"
+        },
+        {
+          "candle_timestamp_ms": 1791895500000,
+          "available_at_ms": 1791895560000,
+          "elapsed_minutes": 135.36666666666667,
+          "close": 332.8,
+          "observed_return": -0.012626103044689585,
+          "base_volume": "7046"
+        },
+        {
+          "candle_timestamp_ms": 1791895560000,
+          "available_at_ms": 1791895620000,
+          "elapsed_minutes": 136.36666666666667,
+          "close": 331.38,
+          "observed_return": -0.016839056571361977,
+          "base_volume": "10436.242086"
+        },
+        {
+          "candle_timestamp_ms": 1791895620000,
+          "available_at_ms": 1791895680000,
+          "elapsed_minutes": 137.36666666666667,
+          "close": 335.8829,
+          "observed_return": -0.0034795435887896575,
+          "base_volume": "35352.670956"
+        },
+        {
+          "candle_timestamp_ms": 1791895680000,
+          "available_at_ms": 1791895740000,
+          "elapsed_minutes": 138.36666666666667,
+          "close": 336.0,
+          "observed_return": -0.0031321232662732124,
+          "base_volume": "4938.729678"
+        },
+        {
+          "candle_timestamp_ms": 1791895740000,
+          "available_at_ms": 1791895800000,
+          "elapsed_minutes": 139.36666666666667,
+          "close": 336.25,
+          "observed_return": -0.0023904060960844298,
+          "base_volume": "17581.476729"
+        },
+        {
+          "candle_timestamp_ms": 1791895800000,
+          "available_at_ms": 1791895860000,
+          "elapsed_minutes": 140.36666666666667,
+          "close": 336.66,
+          "observed_return": -0.0011739899369747064,
+          "base_volume": "2844.619311"
+        },
+        {
+          "candle_timestamp_ms": 1791895860000,
+          "available_at_ms": 1791895920000,
+          "elapsed_minutes": 141.36666666666667,
+          "close": 336.34,
+          "observed_return": -0.002123387914816477,
+          "base_volume": "6878.389"
+        },
+        {
+          "candle_timestamp_ms": 1791895920000,
+          "available_at_ms": 1791895980000,
+          "elapsed_minutes": 142.36666666666667,
+          "close": 335.28,
+          "observed_return": -0.005268268716416946,
+          "base_volume": "25440.064552"
+        },
+        {
+          "candle_timestamp_ms": 1791895980000,
+          "available_at_ms": 1791896040000,
+          "elapsed_minutes": 143.36666666666667,
+          "close": 336.1627,
+          "observed_return": -0.0026494137319144073,
+          "base_volume": "11490.464579"
+        },
+        {
+          "candle_timestamp_ms": 1791896040000,
+          "available_at_ms": 1791896100000,
+          "elapsed_minutes": 144.36666666666667,
+          "close": 337.76,
+          "observed_return": 0.0020895656118558037,
+          "base_volume": "52484.872544"
+        },
+        {
+          "candle_timestamp_ms": 1791896100000,
+          "available_at_ms": 1791896160000,
+          "elapsed_minutes": 145.36666666666667,
+          "close": 336.61,
+          "observed_return": -0.0013223333710125074,
+          "base_volume": "10450.779814"
+        },
+        {
+          "candle_timestamp_ms": 1791896160000,
+          "available_at_ms": 1791896220000,
+          "elapsed_minutes": 146.36666666666667,
+          "close": 337.0,
+          "observed_return": -0.00016525458551808203,
+          "base_volume": "3258.239"
+        },
+        {
+          "candle_timestamp_ms": 1791896220000,
+          "available_at_ms": 1791896280000,
+          "elapsed_minutes": 147.36666666666667,
+          "close": 338.4,
+          "observed_return": 0.003988361567539123,
+          "base_volume": "19285.218008"
+        },
+        {
+          "candle_timestamp_ms": 1791896280000,
+          "available_at_ms": 1791896340000,
+          "elapsed_minutes": 148.36666666666667,
+          "close": 338.51,
+          "observed_return": 0.0043147171224222625,
+          "base_volume": "28264.20582"
+        },
+        {
+          "candle_timestamp_ms": 1791896340000,
+          "available_at_ms": 1791896400000,
+          "elapsed_minutes": 149.36666666666667,
+          "close": 338.2,
+          "observed_return": 0.003394987831388141,
+          "base_volume": "6173.195059"
+        },
+        {
+          "candle_timestamp_ms": 1791896400000,
+          "available_at_ms": 1791896460000,
+          "elapsed_minutes": 150.36666666666667,
+          "close": 337.31,
+          "observed_return": 0.0007544747055159284,
+          "base_volume": "541.78402"
+        },
+        {
+          "candle_timestamp_ms": 1791896460000,
+          "available_at_ms": 1791896520000,
+          "elapsed_minutes": 151.36666666666667,
+          "close": 337.07,
+          "observed_return": 4.2426222134794855e-05,
+          "base_volume": "1964.901979"
+        },
+        {
+          "candle_timestamp_ms": 1791896520000,
+          "available_at_ms": 1791896580000,
+          "elapsed_minutes": 152.36666666666667,
+          "close": 337.7562,
+          "observed_return": 0.0020782915108688016,
+          "base_volume": "771"
+        },
+        {
+          "candle_timestamp_ms": 1791896580000,
+          "available_at_ms": 1791896640000,
+          "elapsed_minutes": 153.36666666666667,
+          "close": 337.88,
+          "observed_return": 0.0024455898535464815,
+          "base_volume": "3453.356927"
+        },
+        {
+          "candle_timestamp_ms": 1791896640000,
+          "available_at_ms": 1791896700000,
+          "elapsed_minutes": 154.36666666666667,
+          "close": 337.54,
+          "observed_return": 0.001436854502089746,
+          "base_volume": "702.604031"
+        },
+        {
+          "candle_timestamp_ms": 1791896700000,
+          "available_at_ms": 1791896760000,
+          "elapsed_minutes": 155.36666666666667,
+          "close": 337.5,
+          "observed_return": 0.0013181797548595942,
+          "base_volume": "6672"
+        },
+        {
+          "candle_timestamp_ms": 1791896760000,
+          "available_at_ms": 1791896820000,
+          "elapsed_minutes": 156.36666666666667,
+          "close": 337.31,
+          "observed_return": 0.0007544747055159284,
+          "base_volume": "8161.369051"
+        },
+        {
+          "candle_timestamp_ms": 1791896820000,
+          "available_at_ms": 1791896880000,
+          "elapsed_minutes": 157.36666666666667,
+          "close": 338.09,
+          "observed_return": 0.003068632276505001,
+          "base_volume": "13394"
+        },
+        {
+          "candle_timestamp_ms": 1791896880000,
+          "available_at_ms": 1791896940000,
+          "elapsed_minutes": 158.36666666666667,
+          "close": 338.2166,
+          "observed_return": 0.0034442378514887295,
+          "base_volume": "3768.786417"
+        },
+        {
+          "candle_timestamp_ms": 1791896940000,
+          "available_at_ms": 1791897000000,
+          "elapsed_minutes": 159.36666666666667,
+          "close": 338.7113,
+          "observed_return": 0.004911947787858084,
+          "base_volume": "3813"
+        },
+        {
+          "candle_timestamp_ms": 1791897000000,
+          "available_at_ms": 1791897060000,
+          "elapsed_minutes": 160.36666666666667,
+          "close": 338.68,
+          "observed_return": 0.00481908479815063,
+          "base_volume": "2906"
+        },
+        {
+          "candle_timestamp_ms": 1791897060000,
+          "available_at_ms": 1791897120000,
+          "elapsed_minutes": 161.36666666666667,
+          "close": 339.23,
+          "observed_return": 0.006450862572565885,
+          "base_volume": "8229"
+        },
+        {
+          "candle_timestamp_ms": 1791897120000,
+          "available_at_ms": 1791897180000,
+          "elapsed_minutes": 162.36666666666667,
+          "close": 338.87,
+          "observed_return": 0.005382789847494074,
+          "base_volume": "4460"
+        },
+        {
+          "candle_timestamp_ms": 1791897180000,
+          "available_at_ms": 1791897240000,
+          "elapsed_minutes": 163.36666666666667,
+          "close": 338.66,
+          "observed_return": 0.004759747424535554,
+          "base_volume": "2140"
+        },
+        {
+          "candle_timestamp_ms": 1791897240000,
+          "available_at_ms": 1791897300000,
+          "elapsed_minutes": 164.36666666666667,
+          "close": 339.01,
+          "observed_return": 0.005798151462799828,
+          "base_volume": "14512"
+        },
+        {
+          "candle_timestamp_ms": 1791897300000,
+          "available_at_ms": 1791897360000,
+          "elapsed_minutes": 165.36666666666667,
+          "close": 339.6507,
+          "observed_return": 0.007699024226559548,
+          "base_volume": "2959"
+        },
+        {
+          "candle_timestamp_ms": 1791897360000,
+          "available_at_ms": 1791897420000,
+          "elapsed_minutes": 166.36666666666667,
+          "close": 339.14,
+          "observed_return": 0.006183844391297821,
+          "base_volume": "2759"
+        },
+        {
+          "candle_timestamp_ms": 1791897420000,
+          "available_at_ms": 1791897480000,
+          "elapsed_minutes": 167.36666666666667,
+          "close": 339.0,
+          "observed_return": 0.00576848277599229,
+          "base_volume": "6291"
+        },
+        {
+          "candle_timestamp_ms": 1791897480000,
+          "available_at_ms": 1791897540000,
+          "elapsed_minutes": 168.36666666666667,
+          "close": 339.6308,
+          "observed_return": 0.007639983539812656,
+          "base_volume": "35223.002995"
+        },
+        {
+          "candle_timestamp_ms": 1791897540000,
+          "available_at_ms": 1791897600000,
+          "elapsed_minutes": 169.36666666666667,
+          "close": 339.7,
+          "observed_return": 0.007845290852520836,
+          "base_volume": "4928.055839"
+        },
+        {
+          "candle_timestamp_ms": 1791897600000,
+          "available_at_ms": 1791897660000,
+          "elapsed_minutes": 170.36666666666667,
+          "close": 339.64,
+          "observed_return": 0.0076672787316753865,
+          "base_volume": "17671"
+        },
+        {
+          "candle_timestamp_ms": 1791897660000,
+          "available_at_ms": 1791897720000,
+          "elapsed_minutes": 171.36666666666667,
+          "close": 339.79,
+          "observed_return": 0.0081123090337889,
+          "base_volume": "1141"
+        },
+        {
+          "candle_timestamp_ms": 1791897720000,
+          "available_at_ms": 1791897780000,
+          "elapsed_minutes": 172.36666666666667,
+          "close": 339.5,
+          "observed_return": 0.007251917116369855,
+          "base_volume": "7542.376299"
+        },
+        {
+          "candle_timestamp_ms": 1791897780000,
+          "available_at_ms": 1791897840000,
+          "elapsed_minutes": 173.36666666666667,
+          "close": 338.96,
+          "observed_return": 0.005649808028761916,
+          "base_volume": "6140.022893"
+        },
+        {
+          "candle_timestamp_ms": 1791897840000,
+          "available_at_ms": 1791897900000,
+          "elapsed_minutes": 174.36666666666667,
+          "close": 339.1269,
+          "observed_return": 0.006144978411579904,
+          "base_volume": "5303.633991"
+        },
+        {
+          "candle_timestamp_ms": 1791897900000,
+          "available_at_ms": 1791897960000,
+          "elapsed_minutes": 175.36666666666667,
+          "close": 339.61,
+          "observed_return": 0.007578272671252995,
+          "base_volume": "3291"
+        },
+        {
+          "candle_timestamp_ms": 1791897960000,
+          "available_at_ms": 1791898020000,
+          "elapsed_minutes": 176.36666666666667,
+          "close": 339.6,
+          "observed_return": 0.007548603984445457,
+          "base_volume": "5575"
+        },
+        {
+          "candle_timestamp_ms": 1791898020000,
+          "available_at_ms": 1791898080000,
+          "elapsed_minutes": 177.36666666666667,
+          "close": 339.56,
+          "observed_return": 0.007429929237215083,
+          "base_volume": "652.2941"
+        },
+        {
+          "candle_timestamp_ms": 1791898080000,
+          "available_at_ms": 1791898140000,
+          "elapsed_minutes": 178.36666666666667,
+          "close": 339.75,
+          "observed_return": 0.007993634286558526,
+          "base_volume": "2852.637262"
+        },
+        {
+          "candle_timestamp_ms": 1791898140000,
+          "available_at_ms": 1791898200000,
+          "elapsed_minutes": 179.36666666666667,
+          "close": 340.15,
+          "observed_return": 0.00918038175886049,
+          "base_volume": "25539"
+        }
+      ],
+      "observation_count": 177,
+      "expected_slots_from_first": 177,
+      "missing_slots_from_first": 0,
+      "first_observed_return": -0.038586204001297086,
+      "horizon_observed_return": 0.00918038175886049,
+      "fixed_hold_close_to_close_return": 0.04968369078845836,
+      "trade_generated": false,
+      "execution_validated": false,
+      "trade_blockers": [
+        "SURPRISE_NOT_AVAILABLE"
+      ],
+      "limitations": [
+        "CANDLE_CLOSE_PROXY_NOT_MIDPOINT",
+        "NO_HISTORICAL_BID_ASK",
+        "NO_CALIBRATED_IMPACT_CURVE",
+        "SMALL_EVENT_SAMPLE"
+      ]
+    },
+    {
+      "event_id": "sec-0000200406-26-000189",
+      "token_symbol": "RJNJUSDT",
+      "event_direction": "neutral",
+      "event_magnitude_fraction": 0.0,
+      "published_at": "2026-10-13T12:12:35+00:00",
+      "decision_available_at": "2026-10-13T12:15:50+00:00",
+      "horizon_minutes": 180,
+      "baseline": {
+        "timestamp_ms": 1791893460000,
+        "timestamp_utc": "2026-10-13T12:11:00+00:00",
+        "session": "pre_market",
+        "open": "259.16",
+        "high": "259.4337",
+        "low": "258.7677",
+        "close": "259.31",
+        "base_volume": "208.823464",
+        "quote_turnover": "54039.33601392"
+      },
+      "baseline_price_kind": "candle_close_proxy",
+      "observations": [
+        {
+          "candle_timestamp_ms": 1791893700000,
+          "available_at_ms": 1791893760000,
+          "elapsed_minutes": 3.4166666666666665,
+          "close": 258.51,
+          "observed_return": -0.0030851104855192935,
+          "base_volume": "150"
+        },
+        {
+          "candle_timestamp_ms": 1791893760000,
+          "available_at_ms": 1791893820000,
+          "elapsed_minutes": 4.416666666666667,
+          "close": 258.99,
+          "observed_return": -0.0012340441942076952,
+          "base_volume": "34"
+        },
+        {
+          "candle_timestamp_ms": 1791893820000,
+          "available_at_ms": 1791893880000,
+          "elapsed_minutes": 5.416666666666667,
+          "close": 258.99,
+          "observed_return": -0.0012340441942076952,
+          "base_volume": "328"
+        },
+        {
+          "candle_timestamp_ms": 1791893880000,
+          "available_at_ms": 1791893940000,
+          "elapsed_minutes": 6.416666666666667,
+          "close": 258.71,
+          "observed_return": -0.0023138328641395534,
+          "base_volume": "7"
+        },
+        {
+          "candle_timestamp_ms": 1791893940000,
+          "available_at_ms": 1791894000000,
+          "elapsed_minutes": 7.416666666666667,
+          "close": 258.45,
+          "observed_return": -0.0033164937719332155,
+          "base_volume": "27"
+        },
+        {
+          "candle_timestamp_ms": 1791894000000,
+          "available_at_ms": 1791894060000,
+          "elapsed_minutes": 8.416666666666666,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "1691.183128"
+        },
+        {
+          "candle_timestamp_ms": 1791894060000,
+          "available_at_ms": 1791894120000,
+          "elapsed_minutes": 9.416666666666666,
+          "close": 258.25,
+          "observed_return": -0.004087771393313067,
+          "base_volume": "139.247"
+        },
+        {
+          "candle_timestamp_ms": 1791894120000,
+          "available_at_ms": 1791894180000,
+          "elapsed_minutes": 10.416666666666666,
+          "close": 257.95,
+          "observed_return": -0.005244687825382788,
+          "base_volume": "87.775026"
+        },
+        {
+          "candle_timestamp_ms": 1791894180000,
+          "available_at_ms": 1791894240000,
+          "elapsed_minutes": 11.416666666666666,
+          "close": 257.7,
+          "observed_return": -0.006208784852107518,
+          "base_volume": "598"
+        },
+        {
+          "candle_timestamp_ms": 1791894240000,
+          "available_at_ms": 1791894300000,
+          "elapsed_minutes": 12.416666666666666,
+          "close": 257.511,
+          "observed_return": -0.006937642204311367,
+          "base_volume": "132"
+        },
+        {
+          "candle_timestamp_ms": 1791894300000,
+          "available_at_ms": 1791894360000,
+          "elapsed_minutes": 13.416666666666666,
+          "close": 258.345,
+          "observed_return": -0.0037214145231575513,
+          "base_volume": "210"
+        },
+        {
+          "candle_timestamp_ms": 1791894360000,
+          "available_at_ms": 1791894420000,
+          "elapsed_minutes": 14.416666666666666,
+          "close": 258.39,
+          "observed_return": -0.0035478770583472485,
+          "base_volume": "807"
+        },
+        {
+          "candle_timestamp_ms": 1791894420000,
+          "available_at_ms": 1791894480000,
+          "elapsed_minutes": 15.416666666666666,
+          "close": 258.45,
+          "observed_return": -0.0033164937719332155,
+          "base_volume": "552"
+        },
+        {
+          "candle_timestamp_ms": 1791894480000,
+          "available_at_ms": 1791894540000,
+          "elapsed_minutes": 16.416666666666668,
+          "close": 258.5117,
+          "observed_return": -0.003078554625737473,
+          "base_volume": "1117.25"
+        },
+        {
+          "candle_timestamp_ms": 1791894540000,
+          "available_at_ms": 1791894600000,
+          "elapsed_minutes": 17.416666666666668,
+          "close": 258.96,
+          "observed_return": -0.0013497358374147117,
+          "base_volume": "124"
+        },
+        {
+          "candle_timestamp_ms": 1791894600000,
+          "available_at_ms": 1791894660000,
+          "elapsed_minutes": 18.416666666666668,
+          "close": 258.69,
+          "observed_return": -0.0023909606262774163,
+          "base_volume": "489"
+        },
+        {
+          "candle_timestamp_ms": 1791894660000,
+          "available_at_ms": 1791894720000,
+          "elapsed_minutes": 19.416666666666668,
+          "close": 258.9225,
+          "observed_return": -0.0014943503914233158,
+          "base_volume": "187"
+        },
+        {
+          "candle_timestamp_ms": 1791894720000,
+          "available_at_ms": 1791894780000,
+          "elapsed_minutes": 20.416666666666668,
+          "close": 259.03,
+          "observed_return": -0.0010797886699318582,
+          "base_volume": "214"
+        },
+        {
+          "candle_timestamp_ms": 1791894780000,
+          "available_at_ms": 1791894840000,
+          "elapsed_minutes": 21.416666666666668,
+          "close": 259.11,
+          "observed_return": -0.0007712776213797401,
+          "base_volume": "294"
+        },
+        {
+          "candle_timestamp_ms": 1791894840000,
+          "available_at_ms": 1791894900000,
+          "elapsed_minutes": 22.416666666666668,
+          "close": 259.0,
+          "observed_return": -0.0011954803131387637,
+          "base_volume": "43"
+        },
+        {
+          "candle_timestamp_ms": 1791894900000,
+          "available_at_ms": 1791894960000,
+          "elapsed_minutes": 23.416666666666668,
+          "close": 259.2,
+          "observed_return": -0.00042420269175891256,
+          "base_volume": "284.198118"
+        },
+        {
+          "candle_timestamp_ms": 1791894960000,
+          "available_at_ms": 1791895020000,
+          "elapsed_minutes": 24.416666666666668,
+          "close": 259.04,
+          "observed_return": -0.0010412247888627046,
+          "base_volume": "650"
+        },
+        {
+          "candle_timestamp_ms": 1791895020000,
+          "available_at_ms": 1791895080000,
+          "elapsed_minutes": 25.416666666666668,
+          "close": 258.66,
+          "observed_return": -0.002506652269484322,
+          "base_volume": "4046.287"
+        },
+        {
+          "candle_timestamp_ms": 1791895080000,
+          "available_at_ms": 1791895140000,
+          "elapsed_minutes": 26.416666666666668,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "3103.075901"
+        },
+        {
+          "candle_timestamp_ms": 1791895140000,
+          "available_at_ms": 1791895200000,
+          "elapsed_minutes": 27.416666666666668,
+          "close": 257.51,
+          "observed_return": -0.006941498592418438,
+          "base_volume": "147.2473"
+        },
+        {
+          "candle_timestamp_ms": 1791895200000,
+          "available_at_ms": 1791895260000,
+          "elapsed_minutes": 28.416666666666668,
+          "close": 257.67,
+          "observed_return": -0.006324476495314424,
+          "base_volume": "412.403881"
+        },
+        {
+          "candle_timestamp_ms": 1791895260000,
+          "available_at_ms": 1791895320000,
+          "elapsed_minutes": 29.416666666666668,
+          "close": 257.57,
+          "observed_return": -0.006710115306004405,
+          "base_volume": "260"
+        },
+        {
+          "candle_timestamp_ms": 1791895320000,
+          "available_at_ms": 1791895380000,
+          "elapsed_minutes": 30.416666666666668,
+          "close": 257.5142,
+          "observed_return": -0.006925301762369274,
+          "base_volume": "155.011142"
+        },
+        {
+          "candle_timestamp_ms": 1791895380000,
+          "available_at_ms": 1791895440000,
+          "elapsed_minutes": 31.416666666666668,
+          "close": 257.94,
+          "observed_return": -0.005283251706451719,
+          "base_volume": "3254.556175"
+        },
+        {
+          "candle_timestamp_ms": 1791895440000,
+          "available_at_ms": 1791895500000,
+          "elapsed_minutes": 32.416666666666664,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "2551"
+        },
+        {
+          "candle_timestamp_ms": 1791895500000,
+          "available_at_ms": 1791895560000,
+          "elapsed_minutes": 33.416666666666664,
+          "close": 257.75,
+          "observed_return": -0.006015965446762528,
+          "base_volume": "20"
+        },
+        {
+          "candle_timestamp_ms": 1791895560000,
+          "available_at_ms": 1791895620000,
+          "elapsed_minutes": 34.416666666666664,
+          "close": 257.79,
+          "observed_return": -0.00586170992248658,
+          "base_volume": "154.4"
+        },
+        {
+          "candle_timestamp_ms": 1791895620000,
+          "available_at_ms": 1791895680000,
+          "elapsed_minutes": 35.416666666666664,
+          "close": 257.9398,
+          "observed_return": -0.005284022984073156,
+          "base_volume": "59"
+        },
+        {
+          "candle_timestamp_ms": 1791895680000,
+          "available_at_ms": 1791895740000,
+          "elapsed_minutes": 36.416666666666664,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "188"
+        },
+        {
+          "candle_timestamp_ms": 1791895740000,
+          "available_at_ms": 1791895800000,
+          "elapsed_minutes": 37.416666666666664,
+          "close": 258.7,
+          "observed_return": -0.002352396745208485,
+          "base_volume": "34340.5"
+        },
+        {
+          "candle_timestamp_ms": 1791895800000,
+          "available_at_ms": 1791895860000,
+          "elapsed_minutes": 38.416666666666664,
+          "close": 257.75,
+          "observed_return": -0.006015965446762528,
+          "base_volume": "16.957561"
+        },
+        {
+          "candle_timestamp_ms": 1791895860000,
+          "available_at_ms": 1791895920000,
+          "elapsed_minutes": 39.416666666666664,
+          "close": 258.61,
+          "observed_return": -0.0026994716748293124,
+          "base_volume": "4646"
+        },
+        {
+          "candle_timestamp_ms": 1791895920000,
+          "available_at_ms": 1791895980000,
+          "elapsed_minutes": 40.416666666666664,
+          "close": 258.6338,
+          "observed_return": -0.0026076896378851577,
+          "base_volume": "25"
+        },
+        {
+          "candle_timestamp_ms": 1791895980000,
+          "available_at_ms": 1791896040000,
+          "elapsed_minutes": 41.416666666666664,
+          "close": 258.74,
+          "observed_return": -0.002198141220932426,
+          "base_volume": "341.468"
+        },
+        {
+          "candle_timestamp_ms": 1791896040000,
+          "available_at_ms": 1791896100000,
+          "elapsed_minutes": 42.416666666666664,
+          "close": 258.71,
+          "observed_return": -0.0023138328641395534,
+          "base_volume": "1"
+        },
+        {
+          "candle_timestamp_ms": 1791896100000,
+          "available_at_ms": 1791896160000,
+          "elapsed_minutes": 43.416666666666664,
+          "close": 258.1905,
+          "observed_return": -0.004317226485673564,
+          "base_volume": "914"
+        },
+        {
+          "candle_timestamp_ms": 1791896160000,
+          "available_at_ms": 1791896220000,
+          "elapsed_minutes": 44.416666666666664,
+          "close": 257.75,
+          "observed_return": -0.006015965446762528,
+          "base_volume": "66.651868"
+        },
+        {
+          "candle_timestamp_ms": 1791896220000,
+          "available_at_ms": 1791896280000,
+          "elapsed_minutes": 45.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "137.213"
+        },
+        {
+          "candle_timestamp_ms": 1791896280000,
+          "available_at_ms": 1791896340000,
+          "elapsed_minutes": 46.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "177"
+        },
+        {
+          "candle_timestamp_ms": 1791896340000,
+          "available_at_ms": 1791896400000,
+          "elapsed_minutes": 47.416666666666664,
+          "close": 257.78,
+          "observed_return": -0.005900273803555733,
+          "base_volume": "292"
+        },
+        {
+          "candle_timestamp_ms": 1791896400000,
+          "available_at_ms": 1791896460000,
+          "elapsed_minutes": 48.416666666666664,
+          "close": 258.31,
+          "observed_return": -0.0038563881068990336,
+          "base_volume": "77"
+        },
+        {
+          "candle_timestamp_ms": 1791896460000,
+          "available_at_ms": 1791896520000,
+          "elapsed_minutes": 49.416666666666664,
+          "close": 258.19,
+          "observed_return": -0.004319154679726989,
+          "base_volume": "104"
+        },
+        {
+          "candle_timestamp_ms": 1791896520000,
+          "available_at_ms": 1791896580000,
+          "elapsed_minutes": 50.416666666666664,
+          "close": 257.8,
+          "observed_return": -0.005823146041417537,
+          "base_volume": "249"
+        },
+        {
+          "candle_timestamp_ms": 1791896580000,
+          "available_at_ms": 1791896640000,
+          "elapsed_minutes": 51.416666666666664,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "162"
+        },
+        {
+          "candle_timestamp_ms": 1791896640000,
+          "available_at_ms": 1791896700000,
+          "elapsed_minutes": 52.416666666666664,
+          "close": 258.25,
+          "observed_return": -0.004087771393313067,
+          "base_volume": "25"
+        },
+        {
+          "candle_timestamp_ms": 1791896700000,
+          "available_at_ms": 1791896760000,
+          "elapsed_minutes": 53.416666666666664,
+          "close": 258.48,
+          "observed_return": -0.003200802128726199,
+          "base_volume": "1989"
+        },
+        {
+          "candle_timestamp_ms": 1791896760000,
+          "available_at_ms": 1791896820000,
+          "elapsed_minutes": 54.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "474"
+        },
+        {
+          "candle_timestamp_ms": 1791896820000,
+          "available_at_ms": 1791896880000,
+          "elapsed_minutes": 55.416666666666664,
+          "close": 258.48,
+          "observed_return": -0.003200802128726199,
+          "base_volume": "5933"
+        },
+        {
+          "candle_timestamp_ms": 1791896880000,
+          "available_at_ms": 1791896940000,
+          "elapsed_minutes": 56.416666666666664,
+          "close": 258.48,
+          "observed_return": -0.003200802128726199,
+          "base_volume": "180.028936"
+        },
+        {
+          "candle_timestamp_ms": 1791896940000,
+          "available_at_ms": 1791897000000,
+          "elapsed_minutes": 57.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "1"
+        },
+        {
+          "candle_timestamp_ms": 1791897000000,
+          "available_at_ms": 1791897060000,
+          "elapsed_minutes": 58.416666666666664,
+          "close": 258.3352,
+          "observed_return": -0.0037592071266052685,
+          "base_volume": "17"
+        },
+        {
+          "candle_timestamp_ms": 1791897060000,
+          "available_at_ms": 1791897120000,
+          "elapsed_minutes": 59.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "41"
+        },
+        {
+          "candle_timestamp_ms": 1791897120000,
+          "available_at_ms": 1791897180000,
+          "elapsed_minutes": 60.416666666666664,
+          "close": 258.42,
+          "observed_return": -0.003432185415140121,
+          "base_volume": "629"
+        },
+        {
+          "candle_timestamp_ms": 1791897180000,
+          "available_at_ms": 1791897240000,
+          "elapsed_minutes": 61.416666666666664,
+          "close": 258.5,
+          "observed_return": -0.003123674366588225,
+          "base_volume": "193"
+        },
+        {
+          "candle_timestamp_ms": 1791897240000,
+          "available_at_ms": 1791897300000,
+          "elapsed_minutes": 62.416666666666664,
+          "close": 258.0,
+          "observed_return": -0.005051868420037797,
+          "base_volume": "381"
+        },
+        {
+          "candle_timestamp_ms": 1791897300000,
+          "available_at_ms": 1791897360000,
+          "elapsed_minutes": 63.416666666666664,
+          "close": 258.1,
+          "observed_return": -0.004666229609347816,
+          "base_volume": "118"
+        },
+        {
+          "candle_timestamp_ms": 1791897360000,
+          "available_at_ms": 1791897420000,
+          "elapsed_minutes": 64.41666666666667,
+          "close": 257.5,
+          "observed_return": -0.0069800624734873695,
+          "base_volume": "14411.6473"
+        },
+        {
+          "candle_timestamp_ms": 1791897420000,
+          "available_at_ms": 1791897480000,
+          "elapsed_minutes": 65.41666666666667,
+          "close": 257.04,
+          "observed_return": -0.008754001002660883,
+          "base_volume": "3781.2473"
+        },
+        {
+          "candle_timestamp_ms": 1791897480000,
+          "available_at_ms": 1791897540000,
+          "elapsed_minutes": 66.41666666666667,
+          "close": 257.5638,
+          "observed_return": -0.006734024912267156,
+          "base_volume": "1568.026938"
+        },
+        {
+          "candle_timestamp_ms": 1791897540000,
+          "available_at_ms": 1791897600000,
+          "elapsed_minutes": 67.41666666666667,
+          "close": 257.838,
+          "observed_return": -0.005676603293355398,
+          "base_volume": "2311"
+        },
+        {
+          "candle_timestamp_ms": 1791897600000,
+          "available_at_ms": 1791897660000,
+          "elapsed_minutes": 68.41666666666667,
+          "close": 257.2117,
+          "observed_return": -0.008091859164706339,
+          "base_volume": "5611.803891"
+        },
+        {
+          "candle_timestamp_ms": 1791897660000,
+          "available_at_ms": 1791897720000,
+          "elapsed_minutes": 69.41666666666667,
+          "close": 256.89,
+          "observed_return": -0.009332459218695854,
+          "base_volume": "1718.34354"
+        },
+        {
+          "candle_timestamp_ms": 1791897720000,
+          "available_at_ms": 1791897780000,
+          "elapsed_minutes": 70.41666666666667,
+          "close": 256.7,
+          "observed_return": -0.010065172959006663,
+          "base_volume": "253.2482"
+        },
+        {
+          "candle_timestamp_ms": 1791897780000,
+          "available_at_ms": 1791897840000,
+          "elapsed_minutes": 71.41666666666667,
+          "close": 255.7503,
+          "observed_return": -0.013727584744128607,
+          "base_volume": "11157.569235"
+        },
+        {
+          "candle_timestamp_ms": 1791897840000,
+          "available_at_ms": 1791897900000,
+          "elapsed_minutes": 72.41666666666667,
+          "close": 256.5,
+          "observed_return": -0.010836450580386403,
+          "base_volume": "1302.75232"
+        },
+        {
+          "candle_timestamp_ms": 1791897900000,
+          "available_at_ms": 1791897960000,
+          "elapsed_minutes": 73.41666666666667,
+          "close": 256.17,
+          "observed_return": -0.01210905865566303,
+          "base_volume": "3139"
+        },
+        {
+          "candle_timestamp_ms": 1791897960000,
+          "available_at_ms": 1791898020000,
+          "elapsed_minutes": 74.41666666666667,
+          "close": 257.9,
+          "observed_return": -0.005437507230727778,
+          "base_volume": "5786.2488"
+        },
+        {
+          "candle_timestamp_ms": 1791898020000,
+          "available_at_ms": 1791898080000,
+          "elapsed_minutes": 75.41666666666667,
+          "close": 256.44,
+          "observed_return": -0.011067833866800325,
+          "base_volume": "697.04803"
+        },
+        {
+          "candle_timestamp_ms": 1791898080000,
+          "available_at_ms": 1791898140000,
+          "elapsed_minutes": 76.41666666666667,
+          "close": 257.046,
+          "observed_return": -0.008730862674019568,
+          "base_volume": "1288"
+        },
+        {
+          "candle_timestamp_ms": 1791898140000,
+          "available_at_ms": 1791898200000,
+          "elapsed_minutes": 77.41666666666667,
+          "close": 254.99,
+          "observed_return": -0.01665959662180394,
+          "base_volume": "15641.313375"
+        },
+        {
+          "candle_timestamp_ms": 1791898200000,
+          "available_at_ms": 1791898260000,
+          "elapsed_minutes": 78.41666666666667,
+          "close": 254.96,
+          "observed_return": -0.016775288265010957,
+          "base_volume": "217039.912911"
+        },
+        {
+          "candle_timestamp_ms": 1791898260000,
+          "available_at_ms": 1791898320000,
+          "elapsed_minutes": 79.41666666666667,
+          "close": 253.425,
+          "observed_return": -0.022694844009101045,
+          "base_volume": "108115.055599"
+        },
+        {
+          "candle_timestamp_ms": 1791898320000,
+          "available_at_ms": 1791898380000,
+          "elapsed_minutes": 80.41666666666667,
+          "close": 253.8,
+          "observed_return": -0.021248698469013894,
+          "base_volume": "45651.593834"
+        },
+        {
+          "candle_timestamp_ms": 1791898380000,
+          "available_at_ms": 1791898440000,
+          "elapsed_minutes": 81.41666666666667,
+          "close": 253.9,
+          "observed_return": -0.020863059658324024,
+          "base_volume": "65370.618313"
+        },
+        {
+          "candle_timestamp_ms": 1791898440000,
+          "available_at_ms": 1791898500000,
+          "elapsed_minutes": 82.41666666666667,
+          "close": 253.25,
+          "observed_return": -0.023369711927808456,
+          "base_volume": "29914.5354"
+        },
+        {
+          "candle_timestamp_ms": 1791898500000,
+          "available_at_ms": 1791898560000,
+          "elapsed_minutes": 83.41666666666667,
+          "close": 254.5,
+          "observed_return": -0.01854922679418458,
+          "base_volume": "57521.836251"
+        },
+        {
+          "candle_timestamp_ms": 1791898560000,
+          "available_at_ms": 1791898620000,
+          "elapsed_minutes": 84.41666666666667,
+          "close": 253.215,
+          "observed_return": -0.023504685511549828,
+          "base_volume": "38882.105704"
+        },
+        {
+          "candle_timestamp_ms": 1791898620000,
+          "available_at_ms": 1791898680000,
+          "elapsed_minutes": 85.41666666666667,
+          "close": 252.57,
+          "observed_return": -0.025992055840499795,
+          "base_volume": "86292.069381"
+        },
+        {
+          "candle_timestamp_ms": 1791898680000,
+          "available_at_ms": 1791898740000,
+          "elapsed_minutes": 86.41666666666667,
+          "close": 253.965,
+          "observed_return": -0.020612394431375525,
+          "base_volume": "46355.596127"
+        },
+        {
+          "candle_timestamp_ms": 1791898740000,
+          "available_at_ms": 1791898800000,
+          "elapsed_minutes": 87.41666666666667,
+          "close": 253.996,
+          "observed_return": -0.02049284640006166,
+          "base_volume": "36589.87983"
+        },
+        {
+          "candle_timestamp_ms": 1791898800000,
+          "available_at_ms": 1791898860000,
+          "elapsed_minutes": 88.41666666666667,
+          "close": 253.81,
+          "observed_return": -0.021210134587944962,
+          "base_volume": "32958.781723"
+        },
+        {
+          "candle_timestamp_ms": 1791898860000,
+          "available_at_ms": 1791898920000,
+          "elapsed_minutes": 89.41666666666667,
+          "close": 253.79,
+          "observed_return": -0.021287262350082936,
+          "base_volume": "34467.959102"
+        },
+        {
+          "candle_timestamp_ms": 1791898920000,
+          "available_at_ms": 1791898980000,
+          "elapsed_minutes": 90.41666666666667,
+          "close": 253.6984,
+          "observed_return": -0.02164050750067492,
+          "base_volume": "26990.12619"
+        },
+        {
+          "candle_timestamp_ms": 1791898980000,
+          "available_at_ms": 1791899040000,
+          "elapsed_minutes": 91.41666666666667,
+          "close": 253.92,
+          "observed_return": -0.02078593189618605,
+          "base_volume": "36049.909859"
+        },
+        {
+          "candle_timestamp_ms": 1791899040000,
+          "available_at_ms": 1791899100000,
+          "elapsed_minutes": 92.41666666666667,
+          "close": 253.5025,
+          "observed_return": -0.022395973930816382,
+          "base_volume": "39913.830303"
+        },
+        {
+          "candle_timestamp_ms": 1791899100000,
+          "available_at_ms": 1791899160000,
+          "elapsed_minutes": 93.41666666666667,
+          "close": 253.4,
+          "observed_return": -0.022791253711773485,
+          "base_volume": "51283.354056"
+        },
+        {
+          "candle_timestamp_ms": 1791899160000,
+          "available_at_ms": 1791899220000,
+          "elapsed_minutes": 94.41666666666667,
+          "close": 253.545,
+          "observed_return": -0.0222320774362732,
+          "base_volume": "21014.379593"
+        },
+        {
+          "candle_timestamp_ms": 1791899220000,
+          "available_at_ms": 1791899280000,
+          "elapsed_minutes": 95.41666666666667,
+          "close": 253.46,
+          "observed_return": -0.022559870425359563,
+          "base_volume": "35337.414351"
+        },
+        {
+          "candle_timestamp_ms": 1791899280000,
+          "available_at_ms": 1791899340000,
+          "elapsed_minutes": 96.41666666666667,
+          "close": 253.54,
+          "observed_return": -0.022251359376807667,
+          "base_volume": "32950.246233"
+        },
+        {
+          "candle_timestamp_ms": 1791899340000,
+          "available_at_ms": 1791899400000,
+          "elapsed_minutes": 97.41666666666667,
+          "close": 252.76,
+          "observed_return": -0.025259342100188986,
+          "base_volume": "52171.93516"
+        },
+        {
+          "candle_timestamp_ms": 1791899400000,
+          "available_at_ms": 1791899460000,
+          "elapsed_minutes": 98.41666666666667,
+          "close": 252.84,
+          "observed_return": -0.02495083105163698,
+          "base_volume": "36526.904224"
+        },
+        {
+          "candle_timestamp_ms": 1791899460000,
+          "available_at_ms": 1791899520000,
+          "elapsed_minutes": 99.41666666666667,
+          "close": 252.4499,
+          "observed_return": -0.0264552080521383,
+          "base_volume": "63302.335121"
+        },
+        {
+          "candle_timestamp_ms": 1791899520000,
+          "available_at_ms": 1791899580000,
+          "elapsed_minutes": 100.41666666666667,
+          "close": 252.075,
+          "observed_return": -0.0279009679534149,
+          "base_volume": "28558.531006"
+        },
+        {
+          "candle_timestamp_ms": 1791899580000,
+          "available_at_ms": 1791899640000,
+          "elapsed_minutes": 101.41666666666667,
+          "close": 251.86,
+          "observed_return": -0.02873009139639804,
+          "base_volume": "78152.281605"
+        },
+        {
+          "candle_timestamp_ms": 1791899640000,
+          "available_at_ms": 1791899700000,
+          "elapsed_minutes": 102.41666666666667,
+          "close": 252.405,
+          "observed_return": -0.026628359878138164,
+          "base_volume": "34424.928628"
+        },
+        {
+          "candle_timestamp_ms": 1791899700000,
+          "available_at_ms": 1791899760000,
+          "elapsed_minutes": 103.41666666666667,
+          "close": 252.255,
+          "observed_return": -0.027206818094173024,
+          "base_volume": "18786.214715"
+        },
+        {
+          "candle_timestamp_ms": 1791899760000,
+          "available_at_ms": 1791899820000,
+          "elapsed_minutes": 104.41666666666667,
+          "close": 252.2075,
+          "observed_return": -0.02738999652925067,
+          "base_volume": "58342.018542"
+        },
+        {
+          "candle_timestamp_ms": 1791899820000,
+          "available_at_ms": 1791899880000,
+          "elapsed_minutes": 105.41666666666667,
+          "close": 252.21,
+          "observed_return": -0.027380355558983438,
+          "base_volume": "24947.662152"
+        },
+        {
+          "candle_timestamp_ms": 1791899880000,
+          "available_at_ms": 1791899940000,
+          "elapsed_minutes": 106.41666666666667,
+          "close": 251.86,
+          "observed_return": -0.02873009139639804,
+          "base_volume": "47466.684487"
+        },
+        {
+          "candle_timestamp_ms": 1791899940000,
+          "available_at_ms": 1791900000000,
+          "elapsed_minutes": 107.41666666666667,
+          "close": 251.97,
+          "observed_return": -0.028305888704639237,
+          "base_volume": "29917.525184"
+        },
+        {
+          "candle_timestamp_ms": 1791900000000,
+          "available_at_ms": 1791900060000,
+          "elapsed_minutes": 108.41666666666667,
+          "close": 251.625,
+          "observed_return": -0.029636342601519372,
+          "base_volume": "32644.186355"
+        },
+        {
+          "candle_timestamp_ms": 1791900060000,
+          "available_at_ms": 1791900120000,
+          "elapsed_minutes": 109.41666666666667,
+          "close": 250.56,
+          "observed_return": -0.033743395935366904,
+          "base_volume": "125574.637977"
+        },
+        {
+          "candle_timestamp_ms": 1791900120000,
+          "available_at_ms": 1791900180000,
+          "elapsed_minutes": 110.41666666666667,
+          "close": 250.52,
+          "observed_return": -0.03389765145964285,
+          "base_volume": "36821.227315"
+        },
+        {
+          "candle_timestamp_ms": 1791900180000,
+          "available_at_ms": 1791900240000,
+          "elapsed_minutes": 111.41666666666667,
+          "close": 250.46,
+          "observed_return": -0.034129034746056774,
+          "base_volume": "110543.51766"
+        },
+        {
+          "candle_timestamp_ms": 1791900240000,
+          "available_at_ms": 1791900300000,
+          "elapsed_minutes": 112.41666666666667,
+          "close": 250.24,
+          "observed_return": -0.0349774401295746,
+          "base_volume": "21401.500456"
+        },
+        {
+          "candle_timestamp_ms": 1791900300000,
+          "available_at_ms": 1791900360000,
+          "elapsed_minutes": 113.41666666666667,
+          "close": 250.1626,
+          "observed_return": -0.0352759245690486,
+          "base_volume": "23034.406364"
+        },
+        {
+          "candle_timestamp_ms": 1791900360000,
+          "available_at_ms": 1791900420000,
+          "elapsed_minutes": 114.41666666666667,
+          "close": 250.615,
+          "observed_return": -0.03353129458948745,
+          "base_volume": "30841.154428"
+        },
+        {
+          "candle_timestamp_ms": 1791900420000,
+          "available_at_ms": 1791900480000,
+          "elapsed_minutes": 115.41666666666667,
+          "close": 250.302,
+          "observed_return": -0.03473834406694698,
+          "base_volume": "14013.1091"
+        },
+        {
+          "candle_timestamp_ms": 1791900480000,
+          "available_at_ms": 1791900540000,
+          "elapsed_minutes": 116.41666666666667,
+          "close": 250.03,
+          "observed_return": -0.03578728163202349,
+          "base_volume": "41581.617411"
+        },
+        {
+          "candle_timestamp_ms": 1791900540000,
+          "available_at_ms": 1791900600000,
+          "elapsed_minutes": 117.41666666666667,
+          "close": 250.21,
+          "observed_return": -0.035093131772781616,
+          "base_volume": "40089.433928"
+        },
+        {
+          "candle_timestamp_ms": 1791900600000,
+          "available_at_ms": 1791900660000,
+          "elapsed_minutes": 118.41666666666667,
+          "close": 249.98,
+          "observed_return": -0.035980101037368484,
+          "base_volume": "29786.864395"
+        },
+        {
+          "candle_timestamp_ms": 1791900660000,
+          "available_at_ms": 1791900720000,
+          "elapsed_minutes": 119.41666666666667,
+          "close": 250.39,
+          "observed_return": -0.03439898191353985,
+          "base_volume": "28670.869856"
+        },
+        {
+          "candle_timestamp_ms": 1791900720000,
+          "available_at_ms": 1791900780000,
+          "elapsed_minutes": 120.41666666666667,
+          "close": 250.54,
+          "observed_return": -0.03382052369750499,
+          "base_volume": "45783.149736"
+        },
+        {
+          "candle_timestamp_ms": 1791900780000,
+          "available_at_ms": 1791900840000,
+          "elapsed_minutes": 121.41666666666667,
+          "close": 250.4,
+          "observed_return": -0.03436041803247081,
+          "base_volume": "15946.517471"
+        },
+        {
+          "candle_timestamp_ms": 1791900840000,
+          "available_at_ms": 1791900900000,
+          "elapsed_minutes": 122.41666666666667,
+          "close": 250.88,
+          "observed_return": -0.03250935174115921,
+          "base_volume": "27627.294637"
+        },
+        {
+          "candle_timestamp_ms": 1791900900000,
+          "available_at_ms": 1791900960000,
+          "elapsed_minutes": 123.41666666666667,
+          "close": 250.91,
+          "observed_return": -0.032393660097952304,
+          "base_volume": "28741.28592"
+        },
+        {
+          "candle_timestamp_ms": 1791900960000,
+          "available_at_ms": 1791901020000,
+          "elapsed_minutes": 124.41666666666667,
+          "close": 250.93,
+          "observed_return": -0.03231653233581422,
+          "base_volume": "21768.191301"
+        },
+        {
+          "candle_timestamp_ms": 1791901020000,
+          "available_at_ms": 1791901080000,
+          "elapsed_minutes": 125.41666666666667,
+          "close": 251.01,
+          "observed_return": -0.032008021287262434,
+          "base_volume": "20481.723953"
+        },
+        {
+          "candle_timestamp_ms": 1791901080000,
+          "available_at_ms": 1791901140000,
+          "elapsed_minutes": 126.41666666666667,
+          "close": 251.1251,
+          "observed_return": -0.03156415101615828,
+          "base_volume": "29877.037652"
+        },
+        {
+          "candle_timestamp_ms": 1791901140000,
+          "available_at_ms": 1791901200000,
+          "elapsed_minutes": 127.41666666666667,
+          "close": 251.4087,
+          "observed_return": -0.03047047934904168,
+          "base_volume": "23175.547868"
+        },
+        {
+          "candle_timestamp_ms": 1791901200000,
+          "available_at_ms": 1791901260000,
+          "elapsed_minutes": 128.41666666666666,
+          "close": 251.28,
+          "observed_return": -0.030966796498399618,
+          "base_volume": "58223.765709"
+        },
+        {
+          "candle_timestamp_ms": 1791901260000,
+          "available_at_ms": 1791901320000,
+          "elapsed_minutes": 129.41666666666666,
+          "close": 251.33,
+          "observed_return": -0.030773977093054627,
+          "base_volume": "20803.74539"
+        },
+        {
+          "candle_timestamp_ms": 1791901320000,
+          "available_at_ms": 1791901380000,
+          "elapsed_minutes": 130.41666666666666,
+          "close": 251.55,
+          "observed_return": -0.029925571709536802,
+          "base_volume": "12597.045422"
+        },
+        {
+          "candle_timestamp_ms": 1791901380000,
+          "available_at_ms": 1791901440000,
+          "elapsed_minutes": 131.41666666666666,
+          "close": 251.35,
+          "observed_return": -0.030696849330916653,
+          "base_volume": "10009.074846"
+        },
+        {
+          "candle_timestamp_ms": 1791901440000,
+          "available_at_ms": 1791901500000,
+          "elapsed_minutes": 132.41666666666666,
+          "close": 251.4,
+          "observed_return": -0.030504029925571663,
+          "base_volume": "10533.58986"
+        },
+        {
+          "candle_timestamp_ms": 1791901500000,
+          "available_at_ms": 1791901560000,
+          "elapsed_minutes": 133.41666666666666,
+          "close": 251.505,
+          "observed_return": -0.030099109174347327,
+          "base_volume": "5066.036161"
+        },
+        {
+          "candle_timestamp_ms": 1791901560000,
+          "available_at_ms": 1791901620000,
+          "elapsed_minutes": 134.41666666666666,
+          "close": 251.55,
+          "observed_return": -0.029925571709536802,
+          "base_volume": "23670.671629"
+        },
+        {
+          "candle_timestamp_ms": 1791901620000,
+          "available_at_ms": 1791901680000,
+          "elapsed_minutes": 135.41666666666666,
+          "close": 251.825,
+          "observed_return": -0.028865064980139632,
+          "base_volume": "20603.37719"
+        },
+        {
+          "candle_timestamp_ms": 1791901680000,
+          "available_at_ms": 1791901740000,
+          "elapsed_minutes": 136.41666666666666,
+          "close": 251.97,
+          "observed_return": -0.028305888704639237,
+          "base_volume": "45408.075832"
+        },
+        {
+          "candle_timestamp_ms": 1791901740000,
+          "available_at_ms": 1791901800000,
+          "elapsed_minutes": 137.41666666666666,
+          "close": 251.78,
+          "observed_return": -0.029038602444950046,
+          "base_volume": "11103.420212"
+        },
+        {
+          "candle_timestamp_ms": 1791901800000,
+          "available_at_ms": 1791901860000,
+          "elapsed_minutes": 138.41666666666666,
+          "close": 251.88,
+          "observed_return": -0.028652963634260176,
+          "base_volume": "15512.156425"
+        },
+        {
+          "candle_timestamp_ms": 1791901860000,
+          "available_at_ms": 1791901920000,
+          "elapsed_minutes": 139.41666666666666,
+          "close": 251.98,
+          "observed_return": -0.028267324823570306,
+          "base_volume": "22087.363483"
+        },
+        {
+          "candle_timestamp_ms": 1791901920000,
+          "available_at_ms": 1791901980000,
+          "elapsed_minutes": 140.41666666666666,
+          "close": 251.59,
+          "observed_return": -0.029771316185260854,
+          "base_volume": "22339.431158"
+        },
+        {
+          "candle_timestamp_ms": 1791901980000,
+          "available_at_ms": 1791902040000,
+          "elapsed_minutes": 141.41666666666666,
+          "close": 251.64,
+          "observed_return": -0.029578496779915975,
+          "base_volume": "9356.62063"
+        },
+        {
+          "candle_timestamp_ms": 1791902040000,
+          "available_at_ms": 1791902100000,
+          "elapsed_minutes": 142.41666666666666,
+          "close": 251.35,
+          "observed_return": -0.030696849330916653,
+          "base_volume": "10312.097236"
+        },
+        {
+          "candle_timestamp_ms": 1791902100000,
+          "available_at_ms": 1791902160000,
+          "elapsed_minutes": 143.41666666666666,
+          "close": 250.93,
+          "observed_return": -0.03231653233581422,
+          "base_volume": "34203.094184"
+        },
+        {
+          "candle_timestamp_ms": 1791902160000,
+          "available_at_ms": 1791902220000,
+          "elapsed_minutes": 144.41666666666666,
+          "close": 250.805,
+          "observed_return": -0.03279858084917664,
+          "base_volume": "21806.303009"
+        },
+        {
+          "candle_timestamp_ms": 1791902220000,
+          "available_at_ms": 1791902280000,
+          "elapsed_minutes": 145.41666666666666,
+          "close": 251.04,
+          "observed_return": -0.03189232964405542,
+          "base_volume": "24490.914818"
+        },
+        {
+          "candle_timestamp_ms": 1791902280000,
+          "available_at_ms": 1791902340000,
+          "elapsed_minutes": 146.41666666666666,
+          "close": 250.96,
+          "observed_return": -0.03220084069260731,
+          "base_volume": "7963.281072"
+        },
+        {
+          "candle_timestamp_ms": 1791902340000,
+          "available_at_ms": 1791902400000,
+          "elapsed_minutes": 147.41666666666666,
+          "close": 250.57,
+          "observed_return": -0.03370483205429797,
+          "base_volume": "24978.664187"
+        },
+        {
+          "candle_timestamp_ms": 1791902400000,
+          "available_at_ms": 1791902460000,
+          "elapsed_minutes": 148.41666666666666,
+          "close": 250.505,
+          "observed_return": -0.03395549728124636,
+          "base_volume": "16576.872186"
+        },
+        {
+          "candle_timestamp_ms": 1791902460000,
+          "available_at_ms": 1791902520000,
+          "elapsed_minutes": 149.41666666666666,
+          "close": 250.37,
+          "observed_return": -0.03447610967567771,
+          "base_volume": "7117.547747"
+        },
+        {
+          "candle_timestamp_ms": 1791902520000,
+          "available_at_ms": 1791902580000,
+          "elapsed_minutes": 150.41666666666666,
+          "close": 250.625,
+          "observed_return": -0.03349273070841852,
+          "base_volume": "51535.991582"
+        },
+        {
+          "candle_timestamp_ms": 1791902580000,
+          "available_at_ms": 1791902640000,
+          "elapsed_minutes": 151.41666666666666,
+          "close": 250.675,
+          "observed_return": -0.033299911303073526,
+          "base_volume": "14677.783326"
+        },
+        {
+          "candle_timestamp_ms": 1791902640000,
+          "available_at_ms": 1791902700000,
+          "elapsed_minutes": 152.41666666666666,
+          "close": 250.3326,
+          "observed_return": -0.034620338590875765,
+          "base_volume": "34992.485859"
+        },
+        {
+          "candle_timestamp_ms": 1791902700000,
+          "available_at_ms": 1791902760000,
+          "elapsed_minutes": 153.41666666666666,
+          "close": 250.39,
+          "observed_return": -0.03439898191353985,
+          "base_volume": "31060.605657"
+        },
+        {
+          "candle_timestamp_ms": 1791902760000,
+          "available_at_ms": 1791902820000,
+          "elapsed_minutes": 154.41666666666666,
+          "close": 250.84,
+          "observed_return": -0.03266360726543516,
+          "base_volume": "52622.05975"
+        },
+        {
+          "candle_timestamp_ms": 1791902820000,
+          "available_at_ms": 1791902880000,
+          "elapsed_minutes": 155.41666666666666,
+          "close": 250.61,
+          "observed_return": -0.033550576530021914,
+          "base_volume": "21287.59851"
+        },
+        {
+          "candle_timestamp_ms": 1791902880000,
+          "available_at_ms": 1791902940000,
+          "elapsed_minutes": 156.41666666666666,
+          "close": 250.6162,
+          "observed_return": -0.033526666923759274,
+          "base_volume": "12204.332718"
+        },
+        {
+          "candle_timestamp_ms": 1791902940000,
+          "available_at_ms": 1791903000000,
+          "elapsed_minutes": 157.41666666666666,
+          "close": 250.54,
+          "observed_return": -0.03382052369750499,
+          "base_volume": "10046.324366"
+        },
+        {
+          "candle_timestamp_ms": 1791903000000,
+          "available_at_ms": 1791903060000,
+          "elapsed_minutes": 158.41666666666666,
+          "close": 250.625,
+          "observed_return": -0.03349273070841852,
+          "base_volume": "17399.460092"
+        },
+        {
+          "candle_timestamp_ms": 1791903060000,
+          "available_at_ms": 1791903120000,
+          "elapsed_minutes": 159.41666666666666,
+          "close": 250.525,
+          "observed_return": -0.03387836951910839,
+          "base_volume": "12171.968066"
+        },
+        {
+          "candle_timestamp_ms": 1791903120000,
+          "available_at_ms": 1791903180000,
+          "elapsed_minutes": 160.41666666666666,
+          "close": 250.47,
+          "observed_return": -0.03409047086498784,
+          "base_volume": "23345.337543"
+        },
+        {
+          "candle_timestamp_ms": 1791903180000,
+          "available_at_ms": 1791903240000,
+          "elapsed_minutes": 161.41666666666666,
+          "close": 250.0806,
+          "observed_return": -0.035592148393814305,
+          "base_volume": "15732.300171"
+        },
+        {
+          "candle_timestamp_ms": 1791903240000,
+          "available_at_ms": 1791903300000,
+          "elapsed_minutes": 162.41666666666666,
+          "close": 250.15,
+          "observed_return": -0.03532451505919554,
+          "base_volume": "28799.006847"
+        },
+        {
+          "candle_timestamp_ms": 1791903300000,
+          "available_at_ms": 1791903360000,
+          "elapsed_minutes": 163.41666666666666,
+          "close": 249.895,
+          "observed_return": -0.036307894026454846,
+          "base_volume": "44427.863059"
+        },
+        {
+          "candle_timestamp_ms": 1791903360000,
+          "available_at_ms": 1791903420000,
+          "elapsed_minutes": 164.41666666666666,
+          "close": 249.875,
+          "observed_return": -0.03638502178859282,
+          "base_volume": "32143.83859"
+        },
+        {
+          "candle_timestamp_ms": 1791903420000,
+          "available_at_ms": 1791903480000,
+          "elapsed_minutes": 165.41666666666666,
+          "close": 249.655,
+          "observed_return": -0.037233427172110645,
+          "base_volume": "33714.043095"
+        },
+        {
+          "candle_timestamp_ms": 1791903480000,
+          "available_at_ms": 1791903540000,
+          "elapsed_minutes": 166.41666666666666,
+          "close": 249.655,
+          "observed_return": -0.037233427172110645,
+          "base_volume": "12319.758143"
+        },
+        {
+          "candle_timestamp_ms": 1791903540000,
+          "available_at_ms": 1791903600000,
+          "elapsed_minutes": 167.41666666666666,
+          "close": 249.42,
+          "observed_return": -0.03813967837723198,
+          "base_volume": "30551.269573"
+        },
+        {
+          "candle_timestamp_ms": 1791903600000,
+          "available_at_ms": 1791903660000,
+          "elapsed_minutes": 168.41666666666666,
+          "close": 249.51,
+          "observed_return": -0.03779260344761104,
+          "base_volume": "37263.842149"
+        },
+        {
+          "candle_timestamp_ms": 1791903660000,
+          "available_at_ms": 1791903720000,
+          "elapsed_minutes": 169.41666666666666,
+          "close": 249.475,
+          "observed_return": -0.03792757703135241,
+          "base_volume": "13928.645902"
+        },
+        {
+          "candle_timestamp_ms": 1791903720000,
+          "available_at_ms": 1791903780000,
+          "elapsed_minutes": 170.41666666666666,
+          "close": 249.54,
+          "observed_return": -0.03767691180440402,
+          "base_volume": "12910.863152"
+        },
+        {
+          "candle_timestamp_ms": 1791903780000,
+          "available_at_ms": 1791903840000,
+          "elapsed_minutes": 171.41666666666666,
+          "close": 249.46,
+          "observed_return": -0.03798542285295592,
+          "base_volume": "39374.991277"
+        },
+        {
+          "candle_timestamp_ms": 1791903840000,
+          "available_at_ms": 1791903900000,
+          "elapsed_minutes": 172.41666666666666,
+          "close": 249.2826,
+          "observed_return": -0.03866954610311979,
+          "base_volume": "16493.218893"
+        },
+        {
+          "candle_timestamp_ms": 1791903900000,
+          "available_at_ms": 1791903960000,
+          "elapsed_minutes": 173.41666666666666,
+          "close": 249.4,
+          "observed_return": -0.03821680613936984,
+          "base_volume": "16139.154089"
+        },
+        {
+          "candle_timestamp_ms": 1791903960000,
+          "available_at_ms": 1791904020000,
+          "elapsed_minutes": 174.41666666666666,
+          "close": 249.31,
+          "observed_return": -0.03856388106899078,
+          "base_volume": "23390.98857"
+        },
+        {
+          "candle_timestamp_ms": 1791904020000,
+          "available_at_ms": 1791904080000,
+          "elapsed_minutes": 175.41666666666666,
+          "close": 249.39,
+          "observed_return": -0.038255370020438884,
+          "base_volume": "16958.405694"
+        },
+        {
+          "candle_timestamp_ms": 1791904080000,
+          "available_at_ms": 1791904140000,
+          "elapsed_minutes": 176.41666666666666,
+          "close": 249.41,
+          "observed_return": -0.03817824225830091,
+          "base_volume": "24831.633711"
+        },
+        {
+          "candle_timestamp_ms": 1791904140000,
+          "available_at_ms": 1791904200000,
+          "elapsed_minutes": 177.41666666666666,
+          "close": 249.405,
+          "observed_return": -0.038197524198835375,
+          "base_volume": "14824.219309"
+        },
+        {
+          "candle_timestamp_ms": 1791904200000,
+          "available_at_ms": 1791904260000,
+          "elapsed_minutes": 178.41666666666666,
+          "close": 249.75,
+          "observed_return": -0.03686707030195524,
+          "base_volume": "53501.562904"
+        },
+        {
+          "candle_timestamp_ms": 1791904260000,
+          "available_at_ms": 1791904320000,
+          "elapsed_minutes": 179.41666666666666,
+          "close": 249.4,
+          "observed_return": -0.03821680613936984,
+          "base_volume": "39585.775143"
+        }
+      ],
+      "observation_count": 177,
+      "expected_slots_from_first": 177,
+      "missing_slots_from_first": 0,
+      "first_observed_return": -0.0030851104855192935,
+      "horizon_observed_return": -0.03821680613936984,
+      "fixed_hold_close_to_close_return": -0.03524041623148033,
+      "trade_generated": false,
+      "execution_validated": false,
+      "trade_blockers": [
+        "SURPRISE_NOT_AVAILABLE"
       ],
       "limitations": [
         "CANDLE_CLOSE_PROXY_NOT_MIDPOINT",
