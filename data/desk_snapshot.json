@@ -3,7 +3,7 @@
   "product": "Decis Analysis",
   "track": "AI Trading Desk",
   "tagline": "AI processes the research. You make the call.",
-  "updatedAt": "2026-10-28T12:12:57.828925+00:00",
+  "updatedAt": "2026-10-28T20:05:39.994688+00:00",
   "posture": {
     "strategyEdgeValidated": false,
     "calibrationSuccessful": true,
@@ -22,7 +22,7 @@
     "holdoutMae": 0.04158885543839811
   },
   "gates": {
-    "events": 41,
+    "events": 42,
     "issuerClocksValidated": 1,
     "immutableConsensus": 0,
     "calibration": "accepted_fit_edge_refused",
@@ -15358,6 +15358,29 @@
         {
           "t": 179.53,
           "ret": 0.0028594304014639693
+        }
+      ],
+      "researchStatus": "pending_surprise"
+    },
+    {
+      "eventId": "sec-0001652044-26-000080",
+      "ticker": "GOOGL",
+      "token": "RGOOGLUSDT",
+      "publishedAt": "2026-10-28T20:01:33+00:00",
+      "timestampSemantics": "edgar_acceptance",
+      "issuerClockValidated": false,
+      "direction": "neutral",
+      "surprise": null,
+      "importance": "unknown",
+      "horizonReturn": -0.07355864811133206,
+      "firstReturn": -0.07355864811133206,
+      "tradeBlockers": [
+        "SURPRISE_NOT_AVAILABLE"
+      ],
+      "path": [
+        {
+          "t": 3.45,
+          "ret": -0.07355864811133206
         }
       ],
       "researchStatus": "pending_surprise"

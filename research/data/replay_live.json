@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-28T12:12:57.753343+00:00",
+  "created_at": "2026-10-28T20:05:39.921287+00:00",
   "synthetic": false,
-  "replay_count": 41,
+  "replay_count": 42,
   "trade_count": 0,
   "execution_validated": false,
   "replays": [
@@ -56621,6 +56621,54 @@
       "first_observed_return": 0.0005718860802927939,
       "horizon_observed_return": 0.0028594304014639693,
       "fixed_hold_close_to_close_return": 0.0022862368541380906,
+      "trade_generated": false,
+      "execution_validated": false,
+      "trade_blockers": [
+        "SURPRISE_NOT_AVAILABLE"
+      ],
+      "limitations": [
+        "CANDLE_CLOSE_PROXY_NOT_MIDPOINT",
+        "NO_HISTORICAL_BID_ASK",
+        "NO_CALIBRATED_IMPACT_CURVE",
+        "SMALL_EVENT_SAMPLE"
+      ]
+    },
+    {
+      "event_id": "sec-0001652044-26-000080",
+      "token_symbol": "RGOOGLUSDT",
+      "event_direction": "neutral",
+      "event_magnitude_fraction": 0.0,
+      "published_at": "2026-10-28T20:01:33+00:00",
+      "decision_available_at": "2026-10-28T20:04:48+00:00",
+      "horizon_minutes": 180,
+      "baseline": {
+        "timestamp_ms": 1793217600000,
+        "timestamp_utc": "2026-10-28T20:00:00+00:00",
+        "session": "after_hours",
+        "open": "325.7",
+        "high": "326.95",
+        "low": "324.89",
+        "close": "326.95",
+        "base_volume": "982606",
+        "quote_turnover": "319250147.0865"
+      },
+      "baseline_price_kind": "candle_close_proxy",
+      "observations": [
+        {
+          "candle_timestamp_ms": 1793217840000,
+          "available_at_ms": 1793217900000,
+          "elapsed_minutes": 3.45,
+          "close": 302.9,
+          "observed_return": -0.07355864811133206,
+          "base_volume": "114924"
+        }
+      ],
+      "observation_count": 1,
+      "expected_slots_from_first": 177,
+      "missing_slots_from_first": 176,
+      "first_observed_return": -0.07355864811133206,
+      "horizon_observed_return": -0.07355864811133206,
+      "fixed_hold_close_to_close_return": 0.0,
       "trade_generated": false,
       "execution_validated": false,
       "trade_blockers": [
