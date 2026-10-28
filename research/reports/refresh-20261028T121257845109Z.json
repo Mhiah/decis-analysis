@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-28T12:12:57.845097+00:00",
+  "sec": {
+    "skipped": false,
+    "reason": null,
+    "discovered": 11,
+    "errors": []
+  },
+  "added_event_ids": [
+    "sec-0001783879-26-000170"
+  ],
+  "candles": {
+    "attempted": 1,
+    "ok": 1,
+    "results": [
+      {
+        "event_id": "sec-0001783879-26-000170",
+        "token": "RHOODUSDT",
+        "rows": 196,
+        "ok": true
+      }
+    ]
+  },
+  "scoring": {
+    "scored": 0,
+    "reason": "no consensus rows"
+  },
+  "replay": {
+    "attempted": 1,
+    "updated": 1,
+    "errors": []
+  },
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "source": "research_live",
+    "output": "/home/runner/work/decis-analysis/decis-analysis/data/desk_snapshot.json",
+    "uiCopy": "/home/runner/work/decis-analysis/decis-analysis/decis-ui/public/desk_snapshot.json",
+    "instruments": 41,
+    "updatedAt": "2026-10-28T12:12:57.828925+00:00",
+    "strategyEdgeValidated": false
+  }
+}
