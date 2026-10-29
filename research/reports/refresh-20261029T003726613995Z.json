@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-10-29T00:37:26.613977+00:00",
+  "sec": {
+    "skipped": false,
+    "reason": null,
+    "discovered": 13,
+    "errors": []
+  },
+  "added_event_ids": [
+    "sec-0001193125-26-436122"
+  ],
+  "candles": {
+    "attempted": 2,
+    "ok": 2,
+    "results": [
+      {
+        "event_id": "sec-0001652044-26-000080",
+        "token": "RGOOGLUSDT",
+        "rows": 196,
+        "ok": true
+      },
+      {
+        "event_id": "sec-0001193125-26-436122",
+        "token": "RMSFTUSDT",
+        "rows": 196,
+        "ok": true
+      }
+    ]
+  },
+  "scoring": {
+    "scored": 0,
+    "reason": "no consensus rows"
+  },
+  "replay": {
+    "attempted": 2,
+    "updated": 2,
+    "errors": []
+  },
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "source": "research_live",
+    "output": "/home/runner/work/decis-analysis/decis-analysis/data/desk_snapshot.json",
+    "uiCopy": "/home/runner/work/decis-analysis/decis-analysis/decis-ui/public/desk_snapshot.json",
+    "instruments": 43,
+    "updatedAt": "2026-10-29T00:37:26.592259+00:00",
+    "strategyEdgeValidated": false
+  }
+}
