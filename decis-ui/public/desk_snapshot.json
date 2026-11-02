@@ -3,7 +3,7 @@
   "product": "Decis Analysis",
   "track": "AI Trading Desk",
   "tagline": "AI processes the research. You make the call.",
-  "updatedAt": "2026-11-02T00:18:16.039753+00:00",
+  "updatedAt": "2026-11-02T21:26:38.481896+00:00",
   "posture": {
     "strategyEdgeValidated": false,
     "calibrationSuccessful": true,
@@ -22,7 +22,7 @@
     "holdoutMae": 0.04158885543839811
   },
   "gates": {
-    "events": 48,
+    "events": 49,
     "issuerClocksValidated": 1,
     "immutableConsensus": 0,
     "calibration": "accepted_fit_edge_refused",
@@ -17959,6 +17959,89 @@
         {
           "t": 179.95,
           "ret": -0.021930930173935104
+        }
+      ],
+      "researchStatus": "pending_surprise"
+    },
+    {
+      "eventId": "sec-0001321655-26-000045",
+      "ticker": "PLTR",
+      "token": "RPLTRUSDT",
+      "publishedAt": "2026-11-02T21:06:48+00:00",
+      "timestampSemantics": "edgar_acceptance",
+      "issuerClockValidated": false,
+      "direction": "neutral",
+      "surprise": null,
+      "importance": "unknown",
+      "horizonReturn": 0.022101016987671196,
+      "firstReturn": 0.04255440031816371,
+      "tradeBlockers": [
+        "SURPRISE_NOT_AVAILABLE"
+      ],
+      "path": [
+        {
+          "t": 4.2,
+          "ret": 0.04255440031816371
+        },
+        {
+          "t": 5.2,
+          "ret": 0.030907334810522213
+        },
+        {
+          "t": 6.2,
+          "ret": 0.03352082268052947
+        },
+        {
+          "t": 7.2,
+          "ret": 0.025453099255724254
+        },
+        {
+          "t": 8.2,
+          "ret": 0.02835066189421065
+        },
+        {
+          "t": 9.2,
+          "ret": 0.04384750866428044
+        },
+        {
+          "t": 10.2,
+          "ret": 0.03615249133571963
+        },
+        {
+          "t": 11.2,
+          "ret": 0.033009488097267115
+        },
+        {
+          "t": 12.2,
+          "ret": 0.027157547866598408
+        },
+        {
+          "t": 13.2,
+          "ret": 0.031020964717913824
+        },
+        {
+          "t": 14.2,
+          "ret": 0.03403215726379183
+        },
+        {
+          "t": 15.2,
+          "ret": 0.03491790239190973
+        },
+        {
+          "t": 16.2,
+          "ret": 0.03573660587466643
+        },
+        {
+          "t": 17.2,
+          "ret": 0.033975342310096135
+        },
+        {
+          "t": 18.2,
+          "ret": 0.02420317027441632
+        },
+        {
+          "t": 19.2,
+          "ret": 0.022101016987671196
         }
       ],
       "researchStatus": "pending_surprise"

@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-30T00:38:23.510121+00:00",
+  "created_at": "2026-11-02T21:26:38.390387+00:00",
   "synthetic": false,
-  "replay_count": 48,
+  "replay_count": 49,
   "trade_count": 0,
   "execution_validated": false,
   "replays": [
@@ -66709,6 +66709,174 @@
       "first_observed_return": 0.0272239727753969,
       "horizon_observed_return": -0.021930930173935104,
       "fixed_hold_close_to_close_return": -0.047852176596427376,
+      "trade_generated": false,
+      "execution_validated": false,
+      "trade_blockers": [
+        "SURPRISE_NOT_AVAILABLE"
+      ],
+      "limitations": [
+        "CANDLE_CLOSE_PROXY_NOT_MIDPOINT",
+        "NO_HISTORICAL_BID_ASK",
+        "NO_CALIBRATED_IMPACT_CURVE",
+        "SMALL_EVENT_SAMPLE"
+      ]
+    },
+    {
+      "event_id": "sec-0001321655-26-000045",
+      "token_symbol": "RPLTRUSDT",
+      "event_direction": "neutral",
+      "event_magnitude_fraction": 0.0,
+      "published_at": "2026-11-02T21:06:48+00:00",
+      "decision_available_at": "2026-11-02T21:10:03+00:00",
+      "horizon_minutes": 180,
+      "baseline": {
+        "timestamp_ms": 1793653500000,
+        "timestamp_utc": "2026-11-02T21:05:00+00:00",
+        "session": "after_hours",
+        "open": "177.02",
+        "high": "187.9",
+        "low": "175.8",
+        "close": "176.01",
+        "base_volume": "396684.49591",
+        "quote_turnover": "72446886.17253921"
+      },
+      "baseline_price_kind": "candle_close_proxy",
+      "observations": [
+        {
+          "candle_timestamp_ms": 1793653800000,
+          "available_at_ms": 1793653860000,
+          "elapsed_minutes": 4.2,
+          "close": 183.5,
+          "observed_return": 0.04255440031816371,
+          "base_volume": "336566.349841"
+        },
+        {
+          "candle_timestamp_ms": 1793653860000,
+          "available_at_ms": 1793653920000,
+          "elapsed_minutes": 5.2,
+          "close": 181.45,
+          "observed_return": 0.030907334810522213,
+          "base_volume": "125371.994392"
+        },
+        {
+          "candle_timestamp_ms": 1793653920000,
+          "available_at_ms": 1793653980000,
+          "elapsed_minutes": 6.2,
+          "close": 181.91,
+          "observed_return": 0.03352082268052947,
+          "base_volume": "142342.631924"
+        },
+        {
+          "candle_timestamp_ms": 1793653980000,
+          "available_at_ms": 1793654040000,
+          "elapsed_minutes": 7.2,
+          "close": 180.49,
+          "observed_return": 0.025453099255724254,
+          "base_volume": "201645.558448"
+        },
+        {
+          "candle_timestamp_ms": 1793654040000,
+          "available_at_ms": 1793654100000,
+          "elapsed_minutes": 8.2,
+          "close": 181.0,
+          "observed_return": 0.02835066189421065,
+          "base_volume": "111685.925349"
+        },
+        {
+          "candle_timestamp_ms": 1793654100000,
+          "available_at_ms": 1793654160000,
+          "elapsed_minutes": 9.2,
+          "close": 183.7276,
+          "observed_return": 0.04384750866428044,
+          "base_volume": "110545.53724"
+        },
+        {
+          "candle_timestamp_ms": 1793654160000,
+          "available_at_ms": 1793654220000,
+          "elapsed_minutes": 10.2,
+          "close": 182.3732,
+          "observed_return": 0.03615249133571963,
+          "base_volume": "107253.227578"
+        },
+        {
+          "candle_timestamp_ms": 1793654220000,
+          "available_at_ms": 1793654280000,
+          "elapsed_minutes": 11.2,
+          "close": 181.82,
+          "observed_return": 0.033009488097267115,
+          "base_volume": "106973.801781"
+        },
+        {
+          "candle_timestamp_ms": 1793654280000,
+          "available_at_ms": 1793654340000,
+          "elapsed_minutes": 12.2,
+          "close": 180.79,
+          "observed_return": 0.027157547866598408,
+          "base_volume": "97565.871059"
+        },
+        {
+          "candle_timestamp_ms": 1793654340000,
+          "available_at_ms": 1793654400000,
+          "elapsed_minutes": 13.2,
+          "close": 181.47,
+          "observed_return": 0.031020964717913824,
+          "base_volume": "53307.452958"
+        },
+        {
+          "candle_timestamp_ms": 1793654400000,
+          "available_at_ms": 1793654460000,
+          "elapsed_minutes": 14.2,
+          "close": 182.0,
+          "observed_return": 0.03403215726379183,
+          "base_volume": "102936.773547"
+        },
+        {
+          "candle_timestamp_ms": 1793654460000,
+          "available_at_ms": 1793654520000,
+          "elapsed_minutes": 15.2,
+          "close": 182.1559,
+          "observed_return": 0.03491790239190973,
+          "base_volume": "34939.199225"
+        },
+        {
+          "candle_timestamp_ms": 1793654520000,
+          "available_at_ms": 1793654580000,
+          "elapsed_minutes": 16.2,
+          "close": 182.3,
+          "observed_return": 0.03573660587466643,
+          "base_volume": "50960.082443"
+        },
+        {
+          "candle_timestamp_ms": 1793654580000,
+          "available_at_ms": 1793654640000,
+          "elapsed_minutes": 17.2,
+          "close": 181.99,
+          "observed_return": 0.033975342310096135,
+          "base_volume": "39013.055955"
+        },
+        {
+          "candle_timestamp_ms": 1793654640000,
+          "available_at_ms": 1793654700000,
+          "elapsed_minutes": 18.2,
+          "close": 180.27,
+          "observed_return": 0.02420317027441632,
+          "base_volume": "14362"
+        },
+        {
+          "candle_timestamp_ms": 1793654700000,
+          "available_at_ms": 1793654760000,
+          "elapsed_minutes": 19.2,
+          "close": 179.9,
+          "observed_return": 0.022101016987671196,
+          "base_volume": "33298"
+        }
+      ],
+      "observation_count": 16,
+      "expected_slots_from_first": 176,
+      "missing_slots_from_first": 160,
+      "first_observed_return": 0.04255440031816371,
+      "horizon_observed_return": 0.022101016987671196,
+      "fixed_hold_close_to_close_return": -0.01961852861035418,
       "trade_generated": false,
       "execution_validated": false,
       "trade_blockers": [
